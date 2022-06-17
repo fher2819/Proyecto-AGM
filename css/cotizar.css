@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-links: #0077DC;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+    color: #042C6E;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 98%;
+    margin: auto;
+}
+
+/* Navegación */
+.nav-main {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-logo {
+    width: 50px;
+}
+
+.nav-ingles {
+    width: 20px;
+}
+
+.nav-español {
+    width: 20px;
+}
+
+/* Nav izquierda*/
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li a{
+    padding: 10px;
+    display: block;
+}
+
+.nav-main ul li ul li a{
+    color: white;
+}
+
+.nav-main ul li a:hover {
+    background-color: #232b2d;
+    color: var(--color-links);
+}
+
+.nav-main ul li ul {
+    position: absolute;
+    display: none;
+}
+.nav-main ul li a:hover + ul, .nav-main ul li ul:hover {
+    display: block;
+    background-color: #232b2d;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Slider */
+.presentacion {
+    height: 20vh;
+    background-image: url(/img/header2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center 55%;
+}
+
+.presentacion-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.pt2 {
+    font-size: 30px;
+    color: #e3e3e3;
+}
+
+/*Formulario de cotización*/
+.content_form {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form {
+    font-family: 'Calibri';
+    background: #232b2d;
+    color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form label {
+    display: block;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.form .block {
+    grid-column: 1  / 3;
+}
+
+.form option {
+    background-color: #232b2d;
+}
+
+.form button,
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid var(--color-links);
+}
+
+.form button {
+    background: #042C6E;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.form button:hover,
+.form button:focus {
+    background: var(--color-links);
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: 518px;
+    bottom: 0px;
+}
+
+iframe {
+    width: 100%;
+    height: 520px;
+    border-style: none;
+    margin-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .form .block {
+        grid-column: auto;
+    }
+}
+
+/*#region Menu Hamburguesa*/
+
+.lblHamburguesa {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .lblHamburguesa {
+        display: inline;
+    }
+
+    .lblHamburguesa {
+        font-size: 25px;
+        color: #000;
+        margin-right: 20px;
+        cursor: pointer;
+        position: right;
+    }
+
+    .nav-menu {
+        position: fixed;
+        width: 100%;
+        height: 0;
+        top: 60px;
+        left: -20px;
+        background: rgba(0, 0, 0, 0.95);
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .nav-main ul {
+        display: inline;
+
+    }
+
+
+
+    .nav-menu ul {
+        display: flex;
+    }
+
+
+
+    .nav-main .nav-menu-right {
+        display: flex;
+    }
+
+    .nav-menu li {
+        display: none;
+        line-height: 30px;
+        margin: 5% 0px;
+        transition: all .5s;
+    }
+
+    .nav-menu li a {
+        color: #fff;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+
+    }
+
+    .navServicios:hover {
+        height: 20vh;
+    }
+
+
+    .navServicios ul {
+        right: 10%;
+    }
+
+    .navServicios ul li {
+        margin: -10% 0px;
+    }
+
+    .navServicios ul li a {
+        font-size: 1em;
+    }
+
+
+    .nav-menu li a.active,
+    .nav-menu li a:hover {
+        color: rgb(1, 162, 255);
+        transition: .3s;
+    }
+
+    .nav-categorias-menu li a {
+        font-size: 0.9em;
+    }
+
+    #check:checked~.nav-menu {
+        height: 100vh;
+    }
+
+    #check:checked~.nav-menu li {
+        display: block;
+    }
+
+    .form-register {
+        top: 15vh;
+    }
+
+    .presentacion-text {
+        display: grid;
+        margin-top: 15vh;
+    }
+
+    .presentacion-text .pt1,
+    .presentacion-text .pt2 {
+        margin-top: 15vh;
+        text-align: center;
+    }
+
+    .ver-mas {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/pexels-pixabay-38238.jpg);
+    }
+
+    .ver-mas h1 {
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+
+
+    .cards,
+    .destinos,
+    .suscribirse {
+        display: inline-block;
+        text-align: center;
+    }
+
+
+    .cards div,
+    .destinos div {
+        margin: 30px;
+    }
+
+    .cards div h3,
+    .destinos div h3 {
+        text-align: center;
+    }
+
+    .suscribirse,
+    .suscribirse #email {
+        width: 100%;
+    }
+
+    .suscribirse div {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .suscribirse h3 {
+        margin-top: 5%;
+        padding: 15px;
+    }
+
+    .video {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .video .video_v {
+        height: 60%;
+    }
+
+    .video .video_v iframe {
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footer,
+    .informacion {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .informacion iframe {
+        width: 115%;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .informacion h2,
+    .informacion p {
+        margin: 5px 0px;
+    }
+
+     .modal {
+        top: -100px;
+    }
+
+    
+#modalPaquete .imgContainer {
+    margin-left: -5px;
+    margin-bottom: 10px;
+    height: 50vh;
+    width: 100%;
+}
+
+
+
+
+}
+
+/*#endregion */

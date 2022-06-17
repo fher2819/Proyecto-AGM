@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio-SimbadTours</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT Bebas Neue-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!--Personalización CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/ApiMapa.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+</head>
+<body>
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(40, 116, 166)',
+        textColor: '#fff'
+    })</script>
+
+    <header class="presentacion">
+        <ul class="slider">
+            <li class="img1"></li>
+            <li class="img2"></li>
+            <li class="img3"></li>
+        </ul>
+        <div class="container">
+            <nav class="nav-main">
+                <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
+                <input type="checkbox" id="check">
+                <label for="check" class="lblHamburguesa">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                       <a href="nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li>
+                       <a href="contacto.html">CONTACTO</a>
+                   </li>
+                   <li>
+                       <a href="destinos.html">DESTINOS</a>
+                   </li>
+                   <li>
+                       <a href="prueba.html">SERVICIOS</a>
+                       <ul>
+                            <li><a href="RentaAuto.html">Renta de autos</a></li>
+                            <li><a href="Hoteles.html">Hotel</a></li>
+                            <li><a href="PaquetesT.html">Paquetes Turísticos</a></li>
+                        </ul>
+                   </li>
+                   <li>
+                       <a href="cotizar.html">COTIZAR</a>
+                   </li>
+                </ul>
+                <a href="#"><img src="img/estados-unidos.png" alt="Idioma Ingles" class="nav-ingles"></a>
+                <a href="#"><img src="img/espana.png" alt="Idioma Español" class="nav-español"></a>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="#miModal">CREAR CUENTA</a>
+                    </li>
+                    <li>
+                        <a href="#">MI CUENTA <i class="fas fa-user"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr noshade color="#232b2d">
+            <div id="miModal" class="modal">
+                <section class="form-register">
+                    <h4>Registrarse</h4>
+                    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+                    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+                    <input class="controls" type="text" name="dirección" id="dirección" placeholder="Dirección">
+                    <input class="controls" type="text" name="país" id="país" placeholder="País">
+                    <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+                    <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+                    <input class="controls" type="password" name="confirmar contraseña" id="correo" placeholder="Confirmar contraseña">
+            
+                    <input class="botons" type="submit" value="Salir" onclick="location.href='#'">
+                    <input class="botons" type="submit" value="Registrar">
+            
+                    <div class="login">
+                        <div class="login-element">
+                            <a href="#" class="fa-brands fa-facebook-square"></a>
+                        </div>
+                        <div class="login-element">
+                            <a href="#" class="fa-brands fa-google"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="presentacion-text">
+                <h1 class="pt1">VACACIONES
+                    SEMANA SANTA</h1>
+                <h2 class="pt2">¡ÚLTIMAS PLAZAS!</h2>
+            </section>
+        </div>
+    </header>
+    <div class="main-container1">
+        <section class="frases">
+            <h1 class="frase1">TUS VACACIONES SOÑADAS TE ESPERAN...</h1>
+            <P class="frase2">Descubre un mundo de maravillas que aguardan en Nicaragua y planifica a medida tus vacaciones con Simbad Tours</P>
+            <p class="frase3">Escápate con tu pareja o con la familia, disfruta de un sin fin de experiencias que te esperan. ¡Sonríe, están empezando tus vacaciones!</p>
+        </section>
+        <section class="categorias">
+            <nav class="nav-categorias">
+                <ul class="nav-categorias-menu">
+                    <li>
+                        <a href="#categorias" onclick="show('cardSemanaSanta')">SEMANA SANTA</a>
+                    </li>
+                    <li>
+                        <a href="#categorias" onclick="show('cardDeTemporada')">DE TEMPORADA</a>
+                    </li>
+                    <li>
+                        <a href="#categorias" onclick="show('cardPlayas')">PLAYAS</a>
+                    </li>
+                    <li>
+                        <a href="#categorias" onclick="show('cardDepartamentos')">DEPARTAMENTOS</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+            <section class="ver-mas">
+                <h1 class="titulo-categoria">SEMANA SANTA</h1>
+                <a href="#" class="mas">Ver más ofertas</a>
+            </section>
+            <div class="cards" id="cardSemanaSanta">
+                <div>
+                    <figure id="imagen">
+                        <img src="img/Leon.jpg" alt="card1">
+                    </figure>
+                    <h3>León</h3>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                            las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/Granada.jpg" alt="card2">
+                    </figure>
+                    <h3>Granada</h3>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                            <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/Masaya.jpg" alt="card3">
+                    </figure>
+                    <h3>Masaya</h3>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
+                            folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+            </div>
+            <div class="cards" id="cardDeTemporada">
+                <div>
+                    <figure id="imagen">
+                        <img src="img/fondoDestinos.jpg" alt="card1">
+                    </figure>
+                    <h3>León</h3>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                            las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/header5.jpg" alt="card2">
+                    </figure>
+                    <h3>Granada</h3>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                            <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/complemento.jpg" alt="card3">
+                    </figure>
+                    <h3>Masaya</h3>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
+                            folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+            </div>
+            <div class="cards" id="cardPlayas">
+                <div>
+                    <figure id="imagen">
+                        <img src="img/header6.jpg" alt="card1">
+                    </figure>
+                    <h3>León</h3>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                            las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/fondoS1.jpg" alt="card2">
+                    </figure>
+                    <h3>Granada</h3>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                            <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/header3.jpg" alt="card3">
+                    </figure>
+                    <h3>Masaya</h3>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
+                            folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+            </div>
+            <div class="cards" id="cardDepartamentos">
+                <div>
+                    <figure id="imagen">
+                        <img src="img/D1.jpg" alt="card1">
+                    </figure>
+                    <h3>León</h3>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                            las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/D2.jpg" alt="card2">
+                    </figure>
+                    <h3>Granada</h3>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                            <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+                <div>
+                    <figure id="imagen">
+                        <img src="img/D3.jpg" alt="card3">
+                    </figure>
+                    <h3>Masaya</h3>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
+                            folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="suscribirse">
+        <div>
+            <h2>Quiero recibir ofertas en mi bandeja de entrada</h2>
+            <br>
+            <p>Recibiré semanalmente ofertas y promociones de Simbad Tours pensadas exclusivamente para mí</p>
+        </div>
+        <div>
+            <input type="email" id="email" pattern=".+@globex\.com" size="60" required> <a href="#">
+            <h3>SUSCRIBIRSE</h3></a>
+            <br>
+            <br>
+            <input type="checkbox" id="cbox1" value="first_checkbox"> <label for="cbox1">Quiero recibir ofertas personalizadas en base a mis intereses</label>
+            <br>
+            <br>
+            <p>Antes de enviar este formulario, debes leer la siguiente información básica sobre protección de datos. Al pulsar el botón de envío manifiestas haber leído esta información</p>
+        </div>
+    </section>
+    <h3 class="titulo_destinos">DESTINOS</h3>
+    <section class="destinos">
+        <div>
+            <img src="img/Leon.jpg" alt="card4">
+            <h3>León</h3>
+            <p>Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de las más antiguas...</p>
+            <a href="destino_granada.html">Ver más <i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <div>
+            <img src="img/Granada.jpg" alt="card5">
+            <h3>Granada</h3>
+            <p>La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes...</p>
+            <a href="destino_granada.html">Ver más <i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <div>
+            <img src="img/Masaya.jpg" alt="card6">
+            <h3>Masaya</h3>
+            <p>Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del folcklore de niacaragua...</p>
+            <a href="destino_granada.html">Ver más <i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <div>
+            <img src="img/Leon.jpg" alt="card7">
+            <h3>León</h3>
+            <p>Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de las más antiguas...</p>
+            <a href="destino_granada.html">Ver más <i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <div>
+            <img src="img/Granada.jpg" alt="card8">
+            <h3>Granada</h3>
+            <p>La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes...</p>
+            <a href="destino_granada.html">Ver más <i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <div>
+            <img src="img/Masaya.jpg" alt="card9">
+            <h3>Masaya</h3>
+            <p>Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del folcklore de niacaragua...</p>
+            <a href="destino_granada.html">Ver más <i class="fas fa-angle-double-right"></i></a>
+        </div>
+    </section>
+    <section class="all_dest">
+        <div class="prueba_b">
+            <button class="btn btn1">VER TODOS LOS DESTINOS</button>
+        </div>
+    </section>
+    <section class="video">
+        <div class="video_p">
+            <p>Nicaragua posee muchos destino aún por descubrir. Tus vacaciones siempre son una auténtica sorpresa. 
+                Con sus enormes lagos, lugares únicos, las primeras ciudades coloniales de Centroamérica  
+                y playas bañadas por el Pacífico o el Caribe. ¿Listo para sorprenderte?
+                <br>
+                <br>
+                Te mostramos un poco de cómo pueden ser tus próximas vacaciones con nosotros en el siguiente video.</p>
+        </div>
+        <div class="video_v">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-HhAlBbz34U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="informacion">
+            <div>
+                <h2>UBICACIÓN</h2>
+                <p><i class="fas fa-location-dot"></i> Camino de Oriente</p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.0198208776815!2d-86.25769898570296!3d12.110795536458253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73fe20ebe78887%3A0x2875e490b77285c8!2sCamino%20Oriente%2C%20Managua!5e0!3m2!1ses-419!2sni!4v1652308444926!5m2!1ses-419!2sni" width="400" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <h2>CONTÁCTANOS</h2>
+                <p><i class="fas fa-phone"></i> +505 2224-3771</p>
+                <br>
+                <br>
+
+                <h2>HORARIOS</h2>
+                <p><i class="fas fa-clock"></i> Lunes a viernes <br>   8:00 AM a 5:00 PM</p>
+                <br>
+                <p><i class="fas fa-clock"></i> Sábados <br>   8:30 AM a 12:00 MD</p>
+            </div>
+            <div>
+                <img src="img/Icono Simbad Tours 2.png" alt="Simbad Logo F" class="logo-footer">
+                <p><i class="fas fa-envelope"></i> info@simbadtours.com</p>
+                <br>
+                <div>
+                    <a href="#" class="fa-brands fa-facebook fa-3x"></a>
+                    <a href="#" class="fa-brands fa-instagram fa-3x"></a>
+                    <a href="#" class="fa-brands fa-whatsapp fa-3x"></a>
+                </div>
+            </div>
+        </div>
+        <h4 class="derechos">Copyright© 2022 Simbad Tours | Diseñado y Desarrollado por Simbad Tours.</h4>
+    </footer>
+
+    <div id="modalPaquete" class="modal modalPaquete">
+        <section class="form-register">
+            <h4>PAQUETE POR TIEMPO LIMITADO</h4>
+            <div class="imgContainer">
+                <figure id="imagen">
+                    <img src="img/Leon.jpg" alt="card1">
+                </figure>
+
+            </div>
+            <div class="botons contenedorReloj"> <a  id="clock" href="destinos.html"></a></div>
+            
+            <div class="botons cerrarModal"> <a href="#">Regresar</a>
+
+            <div class="login">
+                <div class="login-element">
+                    <a href="#" class="fa-brands fa-facebook-square"></a>
+                </div>
+                <div class="login-element">
+                    <a href="#" class="fa-brands fa-google"></a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/js/changeDiv.js"></script>
+    <script src="/js/relojOferta.js"></script>
+</body>
+</html>

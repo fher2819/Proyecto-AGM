@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT Bebas Neue-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!--Personalización CSS-->
+    <link rel="stylesheet" href="css/destinos.css">
+    <!--Agregando Javascript-->
+    <script src="js/destinos.js"></script>
+</head>
+<body>
+    <header class="presentacion">
+        <div class="container">
+            <nav class="nav-main" id="menu">
+                <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
+                <input type="checkbox" id="check">
+                <label for="check" class="lblHamburguesa">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                       <a href="nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li>
+                       <a href="contacto.html">CONTACTO</a>
+                   </li>
+                   <li>
+                       <a href="destinos.html">DESTINOS</a>
+                   </li>
+                   <li>
+                       <a href="">SERVICIOS</a>
+                       <ul>
+                           <li><a href="RentaAuto.html">Renta de autos</a></li>
+                           <li><a href="Hoteles.html">Hotel</a></li>
+                           <li><a href="PaquetesT.html">Paquetes Turísticos</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="cotizar.html">COTIZAR</a>
+                   </li>
+                </ul>
+                <a href="#"><img src="img/estados-unidos.png" alt="Idioma Ingles" class="nav-ingles"></a>
+                <a href="#"><img src="img/espana.png" alt="Idioma Español" class="nav-español"></a>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="#miModal">CREAR CUENTA</a>
+                    </li>
+                    <li>
+                        <a href="#">MI CUENTA <i class="fas fa-user"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr noshade color="#232b2d">
+            <section class="presentacion-text">
+                <h2 class="pt2">NICARAGUA</h2>
+            </section>
+        </div>
+    </header>
+
+
+    <div class="containerd">
+        <div class="inicio">
+            <p class="uno">Nicaragua se encuentra en el corazón de América Central, es uno de esos destinos aún por descubrir. Tu viaje al país puede ser una auténtica sorpresa. Con sus enormes lagos, tierra de volcanes, las primeras ciudades coloniales de Centroamérica y playas bañadas por el Pacífico o Caribe donde hacer deportes de riesgo. Es un destino ideal que puedes descubrir con nosotros.</p>
+            <section class="datos">
+                <p><i class="fa-solid fa-map-location-dot"></i> Los mejores tours de Nicaragua</p>
+                <p><i class="fa-solid fa-suitcase-rolling"></i> Paquetes que se adaptan a todo lo que desees</p>
+                <p><i class="fa-solid fa-paper-plane"></i> info@simbadtours.com</p>
+            </section>
+        </div>
+
+        <div class="busquedas">
+            <h2><i class="fa-solid fa-list"></i> Lista de todos los destinos disponibles</h2>
+            <input type="search" placeholder="Buscar destino..." class="card-filter">
+            <div>
+                <select name="" id="">
+                    <option value="" selected>Todos</option>
+                    <option value="">De temporada</option>
+                    <option value="">Departamentos</option>
+                    <option value="">Playas</option>
+                </select>
+                <button>FILTRAR</button>
+            </div>
+        </div>
+
+        <article class="cards">
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Leon.jpg" alt="card1">
+                </figure>
+                <div class="cajita">
+                    <h3>León</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Granada.jpg" alt="card2">
+                </figure>
+                <div class="cajita">
+                    <h3>Granada</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Masaya.jpg" alt="card3">
+                </figure>
+                <div class="cajita">
+                    <h3>Masaya</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Leon.jpg" alt="card4">
+                </figure>
+                <div class="cajita">
+                    <h3>León</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Granada.jpg" alt="card5">
+                </figure>
+                <div class="cajita">
+                    <h3>Granada</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Masaya.jpg" alt="card6">
+                </figure>
+                <div class="cajita">
+                    <h3>Masaya</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Leon.jpg" alt="card7">
+                </figure>
+                <div class="cajita">
+                    <h3>León</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Granada.jpg" alt="card8">
+                </figure>
+                <div class="cajita">
+                    <h3>Granada</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+            <div class="card">
+                <figure id="imagen">
+                    <img src="img/Masaya.jpg" alt="card9">
+                </figure>
+                <div class="cajita">
+                    <h3>Masaya</h3>
+                    <div class="linea"></div>
+                    <h2>Desde: <span>$139</span></h2>
+                    <div class="linea"></div>
+                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                    <button onclick="location.href='destino_granada.html'">DETALLES</button>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <iframe src="footer.html" frameborder="0"></iframe>
+    </footer>
+</body>
+</html>
+

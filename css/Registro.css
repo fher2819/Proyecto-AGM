@@ -1,0 +1,118 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('fondo.jpg');
+}
+
+.form-register {
+    width: 400px;
+    background: #135994;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    position: relative;
+}
+
+    .form-register h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.controls {
+    width: 100%;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+    .form-register a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+.form-register .botons {
+    width: 100%;
+    background: #0a1349;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /*.login-element img {
+        width: 1.875rem;
+        height: 1.875rem;
+        position: relative;
+        top: 0;
+        left: -0.625rem;
+    }*/
+
+    .login-element:hover {
+        background-color: #1f53c5;
+    }
+
+    .modal{
+        background-color: rgba(0,0,0,.8);
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+      }
+
+      #miModal:target {
+          opacity: 1;
+          pointer-events: auto;
+      }

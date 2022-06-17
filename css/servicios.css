@@ -1,0 +1,209 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+h3 {
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+    color: #042C6E;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.container {
+    background: url(/img/fondoM.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+}
+
+/* Navegación */
+.nav-main {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-logo {
+    width: 50px;
+}
+
+.nav-ingles {
+    width: 20px;
+}
+
+.nav-español {
+    width: 20px;
+}
+
+/* Nav izquierda*/
+.nav-main ul {
+    display: flex;
+}
+
+    .nav-main ul li {
+        padding: 10px;
+    }
+
+        .nav-main ul li a:hover {
+            border-bottom: 2px solid #000000;
+        }
+
+    .nav-main ul.nav-menu {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+h6 {
+    font-size: 34px;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    text-align: center;
+}
+
+.presentacion-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.pt1 {
+    font-size: 48px;
+    color: #062B6B;
+}
+
+.Segcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin: 4%;
+}
+
+.social-login-element1 {
+    padding-left: 5%;
+    width: 100%;
+    display: block;
+    justify-content: center;
+
+
+}
+
+.social-login-element2 {
+    padding-left: 5%;
+    width: 100%;
+    display: block;
+    justify-content: center;
+}
+
+.boton{
+    width: 100%;
+    display: flex;
+    margin-left:7%;
+}
+
+.boton2 {
+    width: 100%;
+    display: flex;
+    margin-left: 10%;
+}
+
+.tb{
+    
+    display: flex;
+    align-items: center;
+}
+.tb a{
+    font-size: 30px;
+}
+
+.tb h1{
+    font-size: 27px;
+    padding-left: 3%;
+}
+
+.btn {
+    
+    width: 35%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /*background-color: var(--button-bg);*/
+    background-color: #042C6E;
+    cursor: pointer;
+    
+
+}
+
+
+
+/*Footer*/
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.informacion {
+    width: 94%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px 10px;
+    border-radius: 50px;
+    background-color: #000000;
+    opacity: 0.85;
+}
+
+.logo-footer {
+    width: 223px;
+    height: 248px;
+}
+
+.informacion div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.informacion h2 {
+    color: #FFFFFF;
+}
+
+.informacion p {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.informacion a {
+    color: #FFFFFF;
+    size: 30px;
+}
+
+.footer {
+    background-image: url(/img/fondo\ footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

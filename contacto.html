@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto-SimbadTours</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT Bebas Neue-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!--Personalización CSS-->
+    <link rel="stylesheet" href="css/contacto.css">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+<body>
+    <header class="presentacion">
+        <div class="container">
+            <nav class="nav-main" id="menu">
+                <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
+                <input type="checkbox" id="check">
+                <label for="check" class="lblHamburguesa">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                       <a href="nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li>
+                       <a href="contacto.html">CONTACTO</a>
+                   </li>
+                   <li>
+                       <a href="destinos.html">DESTINOS</a>
+                   </li>
+                   <li>
+                       <a href="">SERVICIOS</a>
+                       <ul>
+                           <li><a href="RentaAuto.html">Renta de autos</a></li>
+                           <li><a href="Hoteles.html">Hotel</a></li>
+                           <li><a href="PaquetesT.html">Paquetes Turísticos</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="cotizar.html">COTIZAR</a>
+                   </li>
+                </ul>
+                <a href="#"><img src="img/estados-unidos.png" alt="Idioma Ingles" class="nav-ingles"></a>
+                <a href="#"><img src="img/espana.png" alt="Idioma Español" class="nav-español"></a>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="#miModal">CREAR CUENTA</a>
+                    </li>
+                    <li>
+                        <a href="#">MI CUENTA <i class="fas fa-user"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr noshade color="#232b2d">
+            <section class="presentacion-text">
+                <h2 class="pt2">Contáctanos</h2>
+            </section>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <h3>Escríbenos</h3>
+                <form action="">
+                    <p>
+                        <label>Nombre Completo</label>
+                        <input type="text" name="fullname">
+                    </p>
+                    <p>
+                        <label>Dirección de correo</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label>Número de teléfono</label>
+                        <input type="tel" name="phone">
+                    </p>
+                    <p>
+                        <label>Asunto</label>
+                        <input type="text" name="affair">
+                    </p>
+                    <p class="block">
+                       <label>Comentario</label> 
+                       <a href="#modalCamera"><i class="fa-solid fa-camera"></i></a>
+                       <textarea name="message" rows="5"></textarea>
+                    </p>
+                    <p class="block">
+                        <button>
+                            Contactar Ahora
+                        </button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Disponibles de 8am a 5pm</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +505 2224-3771</li>
+                    <li><i class="fas fa-location-dot"></i> Camino de Oriente</li>
+                    <li><i class="fas fa-envelope"></i> info@simbadtours.com</li>
+                </ul>
+                <div class="containerComentario">
+
+                    <div class="containerCanvas">
+                        <canvas id="canvasElement"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="informacion">
+            <div>
+                <h2>UBICACIÓN</h2>
+                <p><i class="fas fa-location-dot"></i> Camino de Oriente</p>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.0198208776815!2d-86.25769898570296!3d12.110795536458253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73fe20ebe78887%3A0x2875e490b77285c8!2sCamino%20Oriente%2C%20Managua!5e0!3m2!1ses-419!2sni!4v1652308444926!5m2!1ses-419!2sni" width="400" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <h2>CONTÁCTANOS</h2>
+                <p><i class="fas fa-phone"></i> +505 2224-3771</p>
+                <br>
+                <br>
+
+                <h2>HORARIOS</h2>
+                <p><i class="fas fa-clock"></i> Lunes a viernes <br>   8:00 AM a 5:00 PM</p>
+                <br>
+                <p><i class="fas fa-clock"></i> Sábados <br>   8:30 AM a 12:00 MD</p>
+            </div>
+            <div>
+                <img src="img/Icono Simbad Tours 2.png" alt="Simbad Logo F" class="logo-footer">
+                <p><i class="fas fa-envelope"></i> info@simbadtours.com</p>
+                <br>
+                <div>
+                    <a href="#" class="fa-brands fa-facebook fa-3x"></a>
+                    <a href="#" class="fa-brands fa-instagram fa-3x"></a>
+                    <a href="#" class="fa-brands fa-whatsapp fa-3x"></a>
+                </div>
+            </div>
+        </div>
+        <h4 class="derechos">Copyright© 2022 Simbad Tours | Diseñado y Desarrollado por Simbad Tours.</h4>
+    </footer>
+
+    <div id="modalCamera" class="modalCamera">
+        <div class="contentModal">
+            <div class="divImage">
+                <video id="videoElement" autoplay="true"></video>
+
+            </div>
+            <div class="containerBtn">
+
+                <button id="tomarPhoto">Tomar Foto </button>
+                <a href="#">Regresar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/camera.js"></script>
+</body>
+</html>

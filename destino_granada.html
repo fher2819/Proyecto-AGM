@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granada-SimbadTours</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT Bebas Neue-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!--Personalización CSS-->
+    <link rel="stylesheet" href="css/destino_granada.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/4fc631efaf.js" crossorigin="anonymous"></script>
+
+    <script>
+        /** @type {HTMLElement}*/
+        var posElt;
+        /** @type {HTMLElement} */
+        var posLinkElt;
+
+
+        window.addEventListener('load', function(){
+            posElt = document.getElementById('Pos');
+            posLinkElt = document.querySelector('#PosLink > a');
+
+            // if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(geoposOK, geoposKO);
+            // }
+            // else {
+            // }
+        });
+
+        /** @param {GeolocationPosition} pos */
+        function geoposOK(pos) {
+            //Obtenemos latitud y longitud
+            var lat = pos.coords.latitude;
+            var long = pos.coords.longitude;
+            //Mostramos la posición
+            posElt.textContent = `${lat}, ${long}`;
+            //generamos enlace a la posición
+            posLinkElt.href = `https://maps.google.com/?q=${lat},${long}`;
+            posLinkElt.textContent = 'Mostrar tu posición en un mapa';
+        }
+
+        /** @param {GeolocationPositionError} err */
+        function geoposKO(err) {
+            console.warn(err.message);
+            let msg;
+            switch(err.code) {
+                case err.PERMISSION_DENIED:
+                    msg = "No nos has dado permiso para obtener tu posición";
+                    break;
+                case err.POSITION_UNAVAILABLE:
+                    msg = "Tu posición actual no está disponible";
+                    break;
+                 case err.TIMEOUT:
+                     msg = "No se ha podido obtener tu posición en un tiempo prudencial";
+                     break;
+                 default:
+                     msg = "Error desconocido";
+                     break;
+            }
+            posElt.textContent = msg;
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(40, 116, 166)',
+        textColor: '#fff'
+    })</script>
+    
+    <header class="presentacion">
+        <div class="container">
+            <nav class="nav-main" id="menu">
+                <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
+                <input type="checkbox" id="check">
+                <label for="check" class="lblHamburguesa">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                       <a href="nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li>
+                       <a href="contacto.html">CONTACTO</a>
+                   </li>
+                   <li>
+                       <a href="destinos.html">DESTINOS</a>
+                   </li>
+                   <li>
+                       <a href="">SERVICIOS</a>
+                       <ul>
+                           <li><a href="RentaAuto.html">Renta de autos</a></li>
+                           <li><a href="Hoteles.html">Hotel</a></li>
+                           <li><a href="PaquetesT.html">Paquetes Turísticos</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="cotizar.html">COTIZAR</a>
+                   </li>
+                </ul>
+                <a href="#"><img src="img/estados-unidos.png" alt="Idioma Ingles" class="nav-ingles"></a>
+                <a href="#"><img src="img/espana.png" alt="Idioma Español" class="nav-español"></a>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="#miModal">CREAR CUENTA</a>
+                    </li>
+                    <li>
+                        <a href="#">MI CUENTA <i class="fas fa-user"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr noshade color="#232b2d">
+            <section class="presentacion-text">
+                <h2 class="pt2">GRANADA</h2>
+            </section>
+        </div>
+    </header>
+
+    <div class="container_destino">
+
+        <div class="imagen"></div>
+
+        <div class="descripcion">
+            <h1>Granada-Nicaragua</h1>
+            <p> <i class="fa-solid fa-hand-point-right"></i> Transporte Managua – Hotel - Managua <br>
+                <i class="fa-solid fa-hand-point-right"></i> 2 noches de alojamiento <br>
+                <i class="fa-solid fa-hand-point-right"></i> Desayuno por 2 días <br>
+                <i class="fa-solid fa-hand-point-right"></i> Tour Histórico de Granada <br>
+                <i class="fa-solid fa-hand-point-right"></i> Impuestos <br>
+                <i class="fa-solid fa-hand-point-right"></i> 100% Satisfacción garantizada</p>
+        </div>
+
+        <div class="mapa-tour">
+            <h1>MAPA DE TOUR</h1>
+            <div id="map"></div>
+        </div>
+        <script src="js/api_mapa.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+
+        <div style="width:100%; margin:2em auto;">
+            <h1>Ejemplo de uso de la API de geolocalización</h1>
+            <p>Tu posición es: <span id="Pos">Desconocida</span></p>
+            <p id="PosLink"><a target="_blank"></a></p>
+        </div>
+
+        <div class="galeria">
+            <h1>Galería</h1>
+            <div class="gallery-container">
+                <div class="gallery-item"><img src="img/galeria1.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria2.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria3.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria4.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria5.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria6.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria7.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria8.jpg" alt="" class="gallery-img"></div>
+                <div class="gallery-item"><img src="img/galeria9.jpg" alt="" class="gallery-img"></div>
+            </div>
+        </div>
+
+        <div class="itinerario" id="itinerario">
+            <h1>itinerario</h1>
+            <div class="box-acordion">
+                <a href="#itinerario" class="acordion">
+                    <p>Primer Día - ChocoMuseo</p>
+                    <span><i class="fas fa-plus"></i></span>
+                </a>
+                <div class="contenido">
+                    El ChocoMuseo, ubicado en una de las calles principales de la ciudad de Granada, es un destino para los amantes del chocolate. A través de una visita al museo, talleres prácticos o un viaje a una finca de cacao - organizados en el local- se explica la historia del chocolate, su proceso de elaboración y de consumo. En este lugar los visitantes saborean el chocolate en su forma más pura, aprenden cómo hacer una barra de chocolate a partir de una semilla de cacao y escuchan la historia de cómo esta semilla se usó primeramente en América Central, para luego llegar a Europa y convertirse en uno de los dulces más populares del mundo. Tour en bote en las isletas de Granada . Recorre aproximadamente 75 isletas, surcando el lago en medio de la naturaleza y las vistas espectaculares, hasta llegar a la Isla de los Monos. Durante el recorrido podrán disfrutar de una vista panorámica del Volcán Mombacho, pasar por las casas de familias nativas que habitan en las isletas, la Fortaleza de San Pablo, restaurantes y casas vacacionales privadas. También observarán la variedad de flora y fauna de la zona.
+                </div>
+                <a href="#itinerario" class="acordion">
+                    <p>Segundo Día - Paseo en coche en Granada</p>
+                    <span><i class="fas fa-plus"></i></span>
+                </a>
+                <div class="contenido">
+                    Los viajes estándar duran más o menos 30 o 60 minutos. Durante el paseo, pasará por antiguas casas coloniales y otros edificios importantes como el Convento San Francisco o la Iglesia de Guadalupe Museo Antiguo Convento San Francisco El Centro Cultural Convento San Francisco es un museo ubicado contiguo a la antigua Iglesia San Francisco. El museo ofrece una linda colección de objetos históricos, pinturas y estatuas. En algunos salones hay exhibiciones permanentes, mientras otros tienen un tema diferente cada cierto tiempo Fábrica de Cigarros Visitaremos la fábrica de cigarros en Granada
+                </div>
+                
+            </div>
+        
+        </div>
+
+        <script src="js/acordeon.js"></script>
+
+        <!--Sección de comentarios-->>
+        <div class="titulo-comentarios">
+            <h1>comentarios</h1>
+        </div>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://simbad-tours.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+    
+    <footer class="footer">
+        <iframe src="footer.html" frameborder="0"></iframe>
+    </footer>
+</body>
+</html>

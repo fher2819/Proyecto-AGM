@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-links: #0077DC;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+    color: #042C6E;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 98%;
+    margin: auto;
+}
+
+/* Navegación */
+.nav-main {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-logo {
+    width: 50px;
+}
+
+.nav-ingles {
+    width: 20px;
+}
+
+.nav-español {
+    width: 20px;
+}
+
+/* Nav izquierda*/
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li a{
+    padding: 10px;
+    display: block;
+}
+
+.nav-main ul li ul li a{
+    color: white;
+}
+
+.nav-main ul li a:hover {
+    background-color: #232b2d;
+    color: var(--color-links);
+}
+
+.nav-main ul li ul {
+    position: absolute;
+    display: none;
+}
+.nav-main ul li a:hover + ul, .nav-main ul li ul:hover {
+    display: block;
+    background-color: #232b2d;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Slider */
+.presentacion {
+    height: 20vh;
+    background-image: url(/img/header2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center 55%;
+}
+
+.presentacion-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.pt2 {
+    font-size: 30px;
+    color: #e3e3e3;
+}
+
+/*Detalle*/
+.ContDescrpcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+}
+.ImagenDes{
+    
+    width: 70%;
+    height: 60%;
+}
+.ImagenDes img{
+    width: 100%;
+    height: 100%;
+}
+.Des{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+}
+.Des p{
+    font-size: 25px;
+}
+
+.ContDetalle{
+    
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.VehiculoDeta{
+    width: 75%;
+    height: 100%;
+}
+
+.Titulo{
+    display: flex;
+    align-items: center;
+    height: 10%;
+}
+
+.Titulo h2{
+    margin-left: 10%;
+    font-size: 50px;
+}
+
+.Imagem{
+    width: 20%;
+    height: 10%;
+}
+
+.Imagem img{
+    width: 100%;
+    height: 100%;
+}
+
+.ContDetalle hr{
+    margin-top: 5%;
+
+}
+.DetalleVehiculo{
+    margin-top: 5%;
+    width: 100%;
+    height: 30%;
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.TituloDetalle{
+    display: flex;
+    align-items: center;
+}
+
+.DetalleP{
+    width: 30%;
+    height: 100%;
+}
+
+.DtVH{
+    padding-top: 5%;
+    width: 100%;
+    height: 30%;
+    margin-top: 3%;
+}
+
+.DetalleS{
+    margin-left: 3%;
+    width: 30%;
+    height: 100%;
+}
+
+.DetalleT{
+    margin-left: 3%;
+    width: 30%;
+    height: 100%;
+}
+
+.DtVH{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.Tipo{
+    padding-left: 10%;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.des a{
+    font-size: 30px;
+}
+.des{
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.des h2{
+    padding-left: 10px;
+}
+.des1{
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.ico{
+    width: 20%;
+    height: 30%;   
+}
+
+.des1 img{
+    width: 100%;
+    height: 100%;
+}
+.DtVH h2{
+    font-size: 30px;
+}
+.DtVH h3{   
+    font-size: 30px;
+}
+
+/*Carrucel*/
+.carrousel{
+    height: auto;
+    width: 100%;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta img{
+   
+    width: 80%;
+   height: 100%;
+   background-size: 100% 100%;
+}
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+.conteCarrouselController a:hover{
+    color: dodgerblue;
+}
+.itemCarrouselArrows > a > i{
+    font-size: 60px;
+    color: black;
+}
+
+.lin{
+    margin-bottom: 10%;
+    border: solid 2px;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: 518px;
+    bottom: 0px;
+}
+
+iframe {
+    width: 100%;
+    height: 520px;
+    border-style: none;
+    margin-bottom: none;
+}
+
+
+/****Resposive*****/
+
+@media (max-width: 800px){
+    .Des p{
+        font-size: 15px;
+    }
+    .Titulo h2{   
+        font-size: 40px;
+    }
+    .itemCarrouselArrows > a > i{
+        font-size: 40px;
+    }
+    .flex{
+        display: block;
+    }
+    .DetalleS{ 
+       width: 40%;
+        margin-top: 3%;  
+    }
+    .DetalleT{
+        width: 40%;
+        margin-top: 3%;
+    }
+    .DtVH h2{
+        font-size: 20px;
+    }
+    .DtVH h3{  
+        font-size: 20px;
+    }
+    .Tipo{
+        width: 50%;
+        margin-left: 90%; 
+    }
+    .DetalleP{
+        width: 40%;
+        margin-left: 3%;
+    }
+    
+}
+
+/*#region Menu Hamburguesa*/
+
+.lblHamburguesa {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .lblHamburguesa {
+        display: inline;
+    }
+
+    .lblHamburguesa {
+        font-size: 25px;
+        color: #000;
+        margin-right: 20px;
+        cursor: pointer;
+        position: right;
+    }
+
+    .nav-menu {
+        position: fixed;
+        width: 100%;
+        height: 0;
+        top: 60px;
+        left: -20px;
+        background: rgba(0, 0, 0, 0.95);
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .nav-main ul {
+        display: inline;
+
+    }
+
+
+
+    .nav-menu ul {
+        display: flex;
+    }
+
+
+
+    .nav-main .nav-menu-right {
+        display: flex;
+    }
+
+    .nav-menu li {
+        display: none;
+        line-height: 30px;
+        margin: 5% 0px;
+        transition: all .5s;
+    }
+
+    .nav-menu li a {
+        color: #fff;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+
+    }
+
+    .navServicios:hover {
+        height: 20vh;
+    }
+
+
+    .navServicios ul {
+        right: 10%;
+    }
+
+    .navServicios ul li {
+        margin: -10% 0px;
+    }
+
+    .navServicios ul li a {
+        font-size: 1em;
+    }
+
+
+    .nav-menu li a.active,
+    .nav-menu li a:hover {
+        color: rgb(1, 162, 255);
+        transition: .3s;
+    }
+
+    .nav-categorias-menu li a {
+        font-size: 0.9em;
+    }
+
+    #check:checked~.nav-menu {
+        height: 100vh;
+    }
+
+    #check:checked~.nav-menu li {
+        display: block;
+    }
+
+    .form-register {
+        top: 15vh;
+    }
+
+    .presentacion-text {
+        display: grid;
+        margin-top: 15vh;
+    }
+
+    .presentacion-text .pt1,
+    .presentacion-text .pt2 {
+        margin-top: 15vh;
+        text-align: center;
+    }
+
+    .ver-mas {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/pexels-pixabay-38238.jpg);
+    }
+
+    .ver-mas h1 {
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+
+
+    .cards,
+    .destinos,
+    .suscribirse {
+        display: inline-block;
+        text-align: center;
+    }
+
+
+    .cards div,
+    .destinos div {
+        margin: 30px;
+    }
+
+    .cards div h3,
+    .destinos div h3 {
+        text-align: center;
+    }
+
+    .suscribirse,
+    .suscribirse #email {
+        width: 100%;
+    }
+
+    .suscribirse div {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .suscribirse h3 {
+        margin-top: 5%;
+        padding: 15px;
+    }
+
+    .video {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .video .video_v {
+        height: 60%;
+    }
+
+    .video .video_v iframe {
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footer,
+    .informacion {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .informacion iframe {
+        width: 115%;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .informacion h2,
+    .informacion p {
+        margin: 5px 0px;
+    }
+
+     .modal {
+        top: -100px;
+    }
+
+    
+#modalPaquete .imgContainer {
+    margin-left: -5px;
+    margin-bottom: 10px;
+    height: 50vh;
+    width: 100%;
+}
+
+
+
+
+}
+
+/*#endregion */

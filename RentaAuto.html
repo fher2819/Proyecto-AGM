@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimbaT</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT Bebas Neue-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!--Personalización CSS-->
+    <link rel="stylesheet" href="css/RentaAuto.css">
+</head>
+
+<body>
+
+    <header class="presentacion">
+        <div class="container">
+            <nav class="nav-main" id="menu">
+                <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
+                <input type="checkbox" id="check">
+                <label for="check" class="lblHamburguesa">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                       <a href="nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li>
+                       <a href="contacto.html">CONTACTO</a>
+                   </li>
+                   <li>
+                       <a href="destinos.html">DESTINOS</a>
+                   </li>
+                   <li>
+                       <a href="">SERVICIOS</a>
+                       <ul>
+                           <li><a href="RentaAuto.html">Renta de autos</a></li>
+                           <li><a href="Hoteles.html">Hotel</a></li>
+                           <li><a href="PaquetesT.html">Paquetes Turísticos</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="cotizar.html">COTIZAR</a>
+                   </li>
+                </ul>
+                <a href="#"><img src="img/estados-unidos.png" alt="Idioma Ingles" class="nav-ingles"></a>
+                <a href="#"><img src="img/espana.png" alt="Idioma Español" class="nav-español"></a>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="#miModal">CREAR CUENTA</a>
+                    </li>
+                    <li>
+                        <a href="#">MI CUENTA <i class="fas fa-user"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr noshade color="#232b2d">
+            <section class="presentacion-text">
+                <h2 class="pt2">Renta de Vehículo</h2>
+            </section>
+        </div>
+    </header>
+
+    <div class="ContDescrpcion">
+        <div class="ImagenDes">
+            <img src="https://www.riojarentacar.com/wp-content/uploads/2019/01/La-mejor-forma-de-rentar-un-carro-en-Costa-Rica.jpg" alt="">
+        </div>
+        <div class="Des">
+            <p>Te brindamos distintas opciones de vehiculos con los cuales puedes reservar en el destino al cual viajas.  Dollar Car Rentar es la empresa de alquiler de automóviles con las que trabajamos y ofrecen una amplia variedad de vehículos. <br><br>
+
+            ¡Reserva con nosotros para obtener las mejores tarifas!</p>
+        </div>
+        
+    </div>
+    <div class="ContDetalle">
+
+        <div class="VehiculoDeta">
+            <div class="Titulo">
+                <h2>Toyota Yaris 2022</h2>
+            </div>
+
+            <div class="carrousel">
+                <div class="conteCarrousel">
+                    <div class="itemCarrousel" id="itemCarrousel-1" checked="checked">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/03/YARIS-E-23-2-copia-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-6">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-2">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-2">
+                        <div class="itemCarrouselTarjeta">
+                            <img src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/03/YARIS-E-23-3-copia-798x466.jpg"
+                                alt="">
+                        </div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-1">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-3">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-3">
+                        <div class="itemCarrouselTarjeta">
+                            <img src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/03/YARIS-E-23-4-copia-798x466.jpg"
+                                alt="">
+                        </div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-2">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-4">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-4">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/03/YARIS-E-23-6-copia-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-3">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-5">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-5">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/03/YARIS-E-23-7-copia-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-4">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-6">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-6">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/03/YARIS-E-23-8-copia-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-5">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-1">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="conteCarrouselController">
+                    <a href="#itemCarrousel-1">•</a>
+                    <a href="#itemCarrousel-2">•</a>
+                    <a href="#itemCarrousel-3">•</a>
+                    <a href="#itemCarrousel-4">•</a>
+                    <a href="#itemCarrousel-5">•</a>
+                    <a href="#itemCarrousel-5">•</a>
+                </div>
+            </div>
+
+
+
+
+            <hr class="linea">
+
+            <div class="DetalleVehiculo">
+                <h2 class="TituloDetalle">Detalles del vehículo</h2>
+
+                <div class="flex">
+
+                    <div class="DetalleP">
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-car"></a>
+                                <h2>Tipo</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Sedan</h3>
+                            </div>
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-cog"></a>
+                                <h2>Motor</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>1.5L</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fas fa-circle"></a>
+                                <h2>Color Ext</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Blanco</h3>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="DetalleS">
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-gauge-high"></a>
+                                <h2>Kilometraje</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>64 Klm</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des1">
+                                <div class="ico">
+                                    <img src="img/icono-del-conjunto-de-la-caja-cambios-vehículo-símbolo-para-reparar-transmisión-el-servicio-reparación-169190105-removebg-preview.png"
+                                        alt="" class="a">
+                                </div>
+                                <h2>Transmisión</h2>
+                            </div>
+
+
+                            <div class="Tipo">
+                                <h3>Manual</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-circle"></a>
+                                <h2>Color Int</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Negro</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="DetalleT">
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-gas-pump"></a>
+                                <h2>Tipo de combustible</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Gasolina</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-train-track"></a>
+                                <h2>Tracción</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>FWD</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <hr class="lin">
+
+
+        <div class="VehiculoDeta">
+            <div class="Titulo">
+                <h2>KIA Seltos 2021</h2>
+            </div>
+
+            <div class="carrousel">
+                <div class="conteCarrousel">
+                    <div class="itemCarrousel" id="itemCarrousel-1" checked="checked">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/05/SELTOS-041-1-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-6">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-2">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-2">
+                        <div class="itemCarrouselTarjeta">
+                            <img src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/05/SELTOS-041-2-798x466.jpg"
+                                alt="">
+                        </div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-1">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-3">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-3">
+                        <div class="itemCarrouselTarjeta">
+                            <img src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/05/SELTOS-041-3-798x466.jpg"
+                                alt="">
+                        </div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-2">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-4">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-4">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/05/SELTOS-041-4-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-3">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-5">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-5">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/05/SELTOS-041-5-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-4">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-6">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-6">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/05/SELTOS-041-6-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-5">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-1">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="conteCarrouselController">
+                    <a href="#itemCarrousel-1">•</a>
+                    <a href="#itemCarrousel-2">•</a>
+                    <a href="#itemCarrousel-3">•</a>
+                    <a href="#itemCarrousel-4">•</a>
+                    <a href="#itemCarrousel-5">•</a>
+                    <a href="#itemCarrousel-5">•</a>
+                </div>
+            </div>
+
+
+
+
+            <hr class="linea">
+
+            <div class="DetalleVehiculo">
+                <h2 class="TituloDetalle">Detalles del vehículo</h2>
+
+                <div class="flex">
+
+                    <div class="DetalleP">
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-car"></a>
+                                <h2>Tipo</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>SUV</h3>
+                            </div>
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-cog"></a>
+                                <h2>Motor</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>1.6L</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fas fa-circle"></a>
+                                <h2>Color Ext</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Blanco Claro</h3>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="DetalleS">
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-gauge-high"></a>
+                                <h2>Kilometraje</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>15300 klm</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des1">
+                                <div class="ico">
+                                    <img src="img/icono-del-conjunto-de-la-caja-cambios-vehículo-símbolo-para-reparar-transmisión-el-servicio-reparación-169190105-removebg-preview.png"
+                                        alt="" class="a">
+                                </div>
+                                <h2>Transmisión</h2>
+                            </div>
+
+
+                            <div class="Tipo">
+                                <h3>Automático</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-circle"></a>
+                                <h2>Color Int</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Negro</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="DetalleT">
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-gas-pump"></a>
+                                <h2>Tipo de combustible</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Gasolina</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-train-track"></a>
+                                <h2>Tracción</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>FWD</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <hr class="lin">
+
+        <div class="VehiculoDeta">
+            <div class="Titulo">
+                <h2>Hyundai Grand i-10 2015</h2>
+            </div>
+
+            <div class="carrousel">
+                <div class="conteCarrousel">
+                    <div class="itemCarrousel" id="itemCarrousel-1" checked="checked">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/04/GRAN-i10-20-1-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-6">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-2">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-2">
+                        <div class="itemCarrouselTarjeta">
+                            <img src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/04/GRAN-i10-20-3-798x466.jpg"
+                                alt="">
+                        </div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-1">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-3">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-3">
+                        <div class="itemCarrouselTarjeta">
+                            <img src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/04/GRAN-i10-20-4-798x466.jpg"
+                                alt="">
+                        </div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-2">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-4">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-4">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/04/GRAN-i10-20-5-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-3">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-5">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-5">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/04/GRAN-i10-20-8-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-4">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-6">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-6">
+                        <div class="itemCarrouselTarjeta"><img
+                                src="https://317gf4wi0sy3dzbid185pjab-wpengine.netdna-ssl.com/files/2022/04/GRAN-i10-20-7-798x466.jpg"
+                                alt=""></div>
+                        <div class="itemCarrouselArrows">
+                            <a href="#itemCarrousel-5">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#itemCarrousel-1">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="conteCarrouselController">
+                    <a href="#itemCarrousel-1">•</a>
+                    <a href="#itemCarrousel-2">•</a>
+                    <a href="#itemCarrousel-3">•</a>
+                    <a href="#itemCarrousel-4">•</a>
+                    <a href="#itemCarrousel-5">•</a>
+                    <a href="#itemCarrousel-5">•</a>
+                </div>
+            </div>
+
+
+
+
+            <hr class="linea">
+
+            <div class="DetalleVehiculo">
+                <h2 class="TituloDetalle">Detalles del vehículo</h2>
+
+                <div class="flex">
+
+                    <div class="DetalleP">
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-car"></a>
+                                <h2>Tipo</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Sedan</h3>
+                            </div>
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-cog"></a>
+                                <h2>Motor</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>1.2L</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fas fa-circle"></a>
+                                <h2>Color Ext</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Blanco</h3>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="DetalleS">
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-gauge-high"></a>
+                                <h2>Kilometraje</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>103146 klm
+                                </h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des1">
+                                <div class="ico">
+                                    <img src="img/icono-del-conjunto-de-la-caja-cambios-vehículo-símbolo-para-reparar-transmisión-el-servicio-reparación-169190105-removebg-preview.png"
+                                        alt="" class="a">
+                                </div>
+                                <h2>Transmisión</h2>
+                            </div>
+
+
+                            <div class="Tipo">
+                                <h3>Manual</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-circle"></a>
+                                <h2>Color Int</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Negro</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="DetalleT">
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-gas-pump"></a>
+                                <h2>Tipo de combustible</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>Gasolina</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="DtVH">
+                            <div class="des">
+                                <a href="" class="fa fa-train-track"></a>
+                                <h2>Tracción</h2>
+                            </div>
+
+                            <div class="Tipo">
+                                <h3>FWD</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--<footer class="footer">
+        <iframe src="footer.html" frameborder="0"></iframe>
+    </footer-->>
+
+</body>
+
+</html>
