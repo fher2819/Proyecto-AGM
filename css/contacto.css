@@ -118,7 +118,7 @@ h6 {
 
 /*Formulario de contacto*/
 .content {
-    max-width: 1170px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em;
@@ -154,6 +154,7 @@ ul {
 }
 
 .contact-form form label {
+    font-size: 40px;
     display: block;
 }
 
@@ -162,6 +163,7 @@ ul {
 }
 
 .contact-form form p {
+    
     margin: 0;
     padding: 1em;
 }
@@ -189,6 +191,11 @@ ul {
     padding: 1em;
 }
 
+
+.contact-form h3{
+    font-size: 45px;
+}
+
 .contact-form form button:hover,
 .contact-form form button:focus {
     background: var(--color-links);
@@ -205,7 +212,8 @@ ul {
 }
 
 .contact-info h4, .contact-info ul, .contact-info p {
-    font-size: 1.2rem;
+    padding-top: 5%;
+    font-size: 30px;
     text-align: center;
     margin: 0 0 1rem 0;
 }

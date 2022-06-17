@@ -12,13 +12,13 @@
 
 h3 {
     font-size: 24px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Quicksand';
     color: #042C6E;
 }
 
 body {
     font-size: 16px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Quicksand';
 }
 
 a {
@@ -37,6 +37,7 @@ ul {
 
 /* Navegación */
 .nav-main {
+
     font-size: 17px;
     display: flex;
     justify-content: space-between;
@@ -63,12 +64,9 @@ ul {
 }
 
 .nav-main ul li a{
+    color: white;
     padding: 10px;
     display: block;
-}
-
-.nav-main ul li ul li a{
-    color: white;
 }
 
 .nav-main ul li a:hover {
@@ -82,7 +80,6 @@ ul {
 }
 .nav-main ul li a:hover + ul, .nav-main ul li ul:hover {
     display: block;
-    background-color: #232b2d;
 }
 
 .nav-main ul.nav-menu {
@@ -92,12 +89,13 @@ ul {
 
 /* Slider */
 .presentacion {
-    height: 20vh;
-    background-image: url(/img/header2.jpg);
+    object-fit: cover;
+    height: 60vh;
+    background-image: url(https://images.pexels.com/photos/1392621/pexels-photo-1392621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: center 55%;
+    background-position: center center;
 }
 
 .presentacion-text {
@@ -107,6 +105,7 @@ ul {
     margin: 15px 0;
 }
 
+
 .pt2 {
     font-size: 30px;
     color: #e3e3e3;
@@ -114,17 +113,17 @@ ul {
 
 /*Detalle*/
 .ContDescrpcion{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     margin-top: 5%;
     width: 100%;
     height: auto;
 }
 .ImagenDes{
-    
-    width: 70%;
-    height: 60%;
+    margin-left: 3%;
+    width: 90%;
+    height: 100%;
 }
 .ImagenDes img{
     width: 100%;
@@ -132,11 +131,11 @@ ul {
 }
 .Des{
     display: flex;
-    width: 70%;
+    width: 90%;
     justify-content: center;
 }
 .Des p{
-    font-size: 25px;
+    font-size: 50px;
 }
 
 .ContDetalle{
@@ -150,7 +149,7 @@ ul {
 }
 
 .VehiculoDeta{
-    width: 75%;
+    width: 90%;
     height: 100%;
 }
 
@@ -162,7 +161,7 @@ ul {
 
 .Titulo h2{
     margin-left: 10%;
-    font-size: 50px;
+    font-size: 80px;
 }
 
 .Imagem{
@@ -243,6 +242,7 @@ ul {
     height: 100%;
 }
 .des h2{
+    
     padding-left: 10px;
 }
 .des1{
@@ -261,10 +261,10 @@ ul {
     height: 100%;
 }
 .DtVH h2{
-    font-size: 30px;
+    font-size: 50px;
 }
 .DtVH h3{   
-    font-size: 30px;
+    font-size: 50px;
 }
 
 /*Carrucel*/
@@ -275,7 +275,7 @@ ul {
 
 .conteCarrousel{
     width: 100%;
-    height: 400px;
+    height: 700px;
     overflow: hidden;
 }
 
@@ -294,9 +294,9 @@ ul {
 }
 
 .itemCarrouselTarjeta img{
-   
+   object-fit: cover;
     width: 80%;
-   height: 100%;
+   height: 80%;
    background-size: 100% 100%;
 }
 .itemCarrouselArrows{
@@ -342,6 +342,7 @@ ul {
 
 /*Footer*/
 footer {
+    margin-top: 5%;
     width: 100%;
     height: 518px;
     bottom: 0px;
@@ -394,221 +395,3 @@ iframe {
     }
     
 }
-
-/*#region Menu Hamburguesa*/
-
-.lblHamburguesa {
-    display: none;
-}
-
-#check {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    .lblHamburguesa {
-        display: inline;
-    }
-
-    .lblHamburguesa {
-        font-size: 25px;
-        color: #000;
-        margin-right: 20px;
-        cursor: pointer;
-        position: right;
-    }
-
-    .nav-menu {
-        position: fixed;
-        width: 100%;
-        height: 0;
-        top: 60px;
-        left: -20px;
-        background: rgba(0, 0, 0, 0.95);
-        text-align: center;
-        transition: all .5s;
-    }
-
-    .nav-main ul {
-        display: inline;
-
-    }
-
-
-
-    .nav-menu ul {
-        display: flex;
-    }
-
-
-
-    .nav-main .nav-menu-right {
-        display: flex;
-    }
-
-    .nav-menu li {
-        display: none;
-        line-height: 30px;
-        margin: 5% 0px;
-        transition: all .5s;
-    }
-
-    .nav-menu li a {
-        color: #fff;
-        font-size: 1.1em;
-        text-transform: uppercase;
-        font-weight: 600;
-
-    }
-
-    .navServicios:hover {
-        height: 20vh;
-    }
-
-
-    .navServicios ul {
-        right: 10%;
-    }
-
-    .navServicios ul li {
-        margin: -10% 0px;
-    }
-
-    .navServicios ul li a {
-        font-size: 1em;
-    }
-
-
-    .nav-menu li a.active,
-    .nav-menu li a:hover {
-        color: rgb(1, 162, 255);
-        transition: .3s;
-    }
-
-    .nav-categorias-menu li a {
-        font-size: 0.9em;
-    }
-
-    #check:checked~.nav-menu {
-        height: 100vh;
-    }
-
-    #check:checked~.nav-menu li {
-        display: block;
-    }
-
-    .form-register {
-        top: 15vh;
-    }
-
-    .presentacion-text {
-        display: grid;
-        margin-top: 15vh;
-    }
-
-    .presentacion-text .pt1,
-    .presentacion-text .pt2 {
-        margin-top: 15vh;
-        text-align: center;
-    }
-
-    .ver-mas {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/pexels-pixabay-38238.jpg);
-    }
-
-    .ver-mas h1 {
-        color: #fff;
-        font-size: 1.5em;
-    }
-
-
-
-    .cards,
-    .destinos,
-    .suscribirse {
-        display: inline-block;
-        text-align: center;
-    }
-
-
-    .cards div,
-    .destinos div {
-        margin: 30px;
-    }
-
-    .cards div h3,
-    .destinos div h3 {
-        text-align: center;
-    }
-
-    .suscribirse,
-    .suscribirse #email {
-        width: 100%;
-    }
-
-    .suscribirse div {
-        padding: 0;
-        margin-top: 30px;
-    }
-
-    .suscribirse h3 {
-        margin-top: 5%;
-        padding: 15px;
-    }
-
-    .video {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-    }
-
-    .video .video_v {
-        height: 60%;
-    }
-
-    .video .video_v iframe {
-        margin-top: 30px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .footer {
-        width: 100%;
-    }
-
-    .footer,
-    .informacion {
-        display: inline-block;
-        text-align: center;
-    }
-
-    .informacion iframe {
-        width: 115%;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
-
-    .informacion h2,
-    .informacion p {
-        margin: 5px 0px;
-    }
-
-     .modal {
-        top: -100px;
-    }
-
-    
-#modalPaquete .imgContainer {
-    margin-left: -5px;
-    margin-bottom: 10px;
-    height: 50vh;
-    width: 100%;
-}
-
-
-
-
-}
-
-/*#endregion */
