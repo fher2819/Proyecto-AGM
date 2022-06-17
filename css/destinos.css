@@ -10,13 +10,13 @@
 
 h3 {
     font-size: 24px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
     color: #042C6E;
 }
 
 body {
     font-size: 16px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
 }
 
 a {
@@ -122,7 +122,7 @@ ul {
 }
 
 .inicio p{
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'calibri';
     color: #000;
 }
@@ -140,23 +140,40 @@ ul {
 
 .datos p {
     color: #0a1349;
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 5px;
 }
 
 /*Filtros de busqueda de destinos*/
 .busquedas {
-    width: 95%;
-    margin: auto;
+    width: 100%;
+    /*margin: auto;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
+.busquedas h2{
+    font-size: 30px;
+}
 
+.busqueda-btn{
+    border-radius: 30px;
+    padding: 5px;
+    border-style: none;
+    background-color: #0a1349;
+    color:#e3e3e3;
+    cursor: pointer;
+}
+
+.busqueda-btn:hover{
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.19);
+    color: #fc7b31;
+    cursor: pointer;
+}
 /*Cards de todos los destinos*/
 .cards {
-    width: 95%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
@@ -213,6 +230,10 @@ ul {
     background-color: #232b2d;
     border-radius: 5px;
 }
+.cajita a{
+    font-size: 21px;
+    font-family: 'Calibri';
+}
 
 .cajita {
     width: 90%;
@@ -233,7 +254,7 @@ ul {
 }
 
 .cards button {
-    background-color: #FF8E01;
+    background-color: #042C6E;
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
@@ -244,8 +265,17 @@ ul {
 .cards button:hover {
     /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
     box-shadow: 10px 10px 5px rgba(0,0,0,0.19);
-    color: #000000;
+    color: #fc7b31;
     cursor: pointer;
+}
+.card-filter{
+    border-radius: 30px;
+    padding: 5px;
+    width: 225px;
+}
+.card-select{
+    border-radius: 30px;
+    padding: 5px;
 }
 
 /*Footer*/
