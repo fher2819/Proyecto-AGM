@@ -154,7 +154,7 @@ ul {
 }
 
 .contact-form form label {
-    font-size: 40px;
+    font-size: 25px;
     display: block;
 }
 
@@ -184,7 +184,7 @@ ul {
     border-bottom: 1px solid var(--color-links);
 }
 
-.contact-form form button {
+.contact-form form {
     background: #042C6E;
     border: 0;
     text-transform: uppercase;
@@ -193,7 +193,7 @@ ul {
 
 
 .contact-form h3{
-    font-size: 45px;
+    font-size: 30px;
 }
 
 .contact-form form button:hover,
@@ -213,7 +213,7 @@ ul {
 
 .contact-info h4, .contact-info ul, .contact-info p {
     padding-top: 5%;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     margin: 0 0 1rem 0;
 }
@@ -596,3 +596,22 @@ ul {
 }
 
 /*#endregion */
+
+/*Validacion*/
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}

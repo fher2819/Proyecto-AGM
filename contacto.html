@@ -77,25 +77,26 @@
 
     <div class="content">
 
-        <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-form">
+        <div class="contact-wrapper animated bounceInUp" id="formulario">
+            <div class="contact-form" id="Grupo">
                 <h3>Escríbenos</h3>
                 <form action="">
                     <p>
                         <label>Nombre Completo</label>
-                        <input type="text" name="fullname">
+                        <input type="text" name="nombre" id="nombre">
+                        <i class="formulario__validación-estado fas fa-times-circle"></i>
                     </p>
                     <p>
                         <label>Dirección de correo</label>
-                        <input type="email" name="email">
+                        <input type="email" name="correo" id="correo" >
                     </p>
                     <p>
                         <label>Número de teléfono</label>
-                        <input type="tel" name="phone">
+                        <input type="tel" name="telefono" id="telefono">
                     </p>
                     <p>
                         <label>Asunto</label>
-                        <input type="text" name="affair">
+                        <input type="text" name="asunto" id="asunto">
                     </p>
                     <p class="block">
                        <label>Comentario</label> 
@@ -103,7 +104,7 @@
                        <textarea name="message" rows="5"></textarea>
                     </p>
                     <p class="block">
-                        <button>
+                        <button type="submit">
                             Contactar Ahora
                         </button>
                     </p>
@@ -175,5 +176,6 @@
     </div>
 
     <script src="/js/camera.js"></script>
+    <script src="/js/Formulario.js"></script>
 </body>
 </html>
