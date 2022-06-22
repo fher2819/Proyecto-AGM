@@ -93,13 +93,13 @@ ul {
 /* Slider */
 .presentacion {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     background-size: 100%;
 }
 
 .slider {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     position: absolute;
     background-image: url(/img/fondo1.jpg);
     background-repeat: no-repeat;
@@ -111,7 +111,7 @@ ul {
 
 .slider li {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,6 +126,7 @@ ul {
 
 .slider .img1 {
     background-image: url(/img/fondoS1.jpg);
+    background-position: center 40%;
     animation-delay: 5s;
 }
 
@@ -313,18 +314,44 @@ ul {
     color: #FFFFFF;
     padding: 20px 20px;
     margin-bottom: 30px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Calibri';
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.suscribirse h3 {
+.sus-correo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.sus-correo input {
+    width: 98%;
+    height: 100%;
+}
+
+.sus-correo button{
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    background-color: #0077DC;
+    border: none;
+    padding: 0.5em;
+    border-radius: 2em;
+    width: 90%;
+}
+
+.sus:hover, .sus:focus {
+    cursor: pointer;
+}
+
+/*.suscribirse h3 {
     float: right;
     background-color: #FF8E01;
     margin-right: 50px;
     padding: 5px 5px;
     font-size: 20px;
-}
+}*/
 
 /*Sección destinos*/
 .titulo_destinos {
@@ -415,17 +442,18 @@ ul {
 .footer {
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #000;
 }
 
 .informacion {
-    width: 94%;
+    width: 98%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 40px 50px;
+    /*padding: 40px 50px;
     border-radius: 50px;
     background-color: #000000;
-    opacity: 0.85;
+    opacity: 0.85;*/
 }
 
 .logo-footer {
@@ -455,19 +483,18 @@ ul {
     margin-right: 10px;
 }
 
-.footer {
+/*.footer {
     background-image: url(/img/fondo\ footer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+}*/
 
 .derechos {
-    color: #000000;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    margin-left: 40px;
-    margin-top: 20px;
+    color: #fff;
+    font-family: 'Calibri';
+    font-size: 1em;
+    text-align: center
 }
 
 /*Ventana flotante de registro*/
@@ -861,3 +888,22 @@ body {
 }
 
 /*#endregion */
+
+@media (min-width: 1400px) {
+    .suscribirse p{
+        font-size: 1.5em;
+    }
+    
+    .suscribirse label {
+        font-size: 1.3em;
+    }
+    
+    .suscribirse h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    
+    
+}

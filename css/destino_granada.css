@@ -96,7 +96,7 @@ ul {
 
 /* Slider */
 .presentacion {
-    height: 20vh;
+    height: 70vh;
     background-image: url(/img/banner_granada.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,7 +125,7 @@ h6 {
 
 /*Contenedor del destino*/
 .container_destino {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -160,8 +160,8 @@ h6 {
 }
 /*API de mapa*/
 #map {
-    height: 50vh;
-    width: 60%;
+    height: 70vh;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
