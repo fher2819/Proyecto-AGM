@@ -404,7 +404,7 @@ ul {
 }
 
 .btn1 {
-    background-color: #FF8E01;
+    background-color: var(--color-links);
     color: #FFFFFF;
     border: none;
     padding: 15px 15px;
