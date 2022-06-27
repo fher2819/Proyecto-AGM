@@ -10,19 +10,19 @@
 
 h1 {
     font-size: 2.5em;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
     color: #042C6E;
 }
 
 h3 {
     font-size: 24px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
     color: #042C6E;
 }
 
 body {
     font-size: 16px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
 }
 
 a {
@@ -181,6 +181,21 @@ h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1em;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-title {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
+    width: 100%;
+    margin: 0;
+    padding: 10px;
     border-radius: 1em;
 }
 
