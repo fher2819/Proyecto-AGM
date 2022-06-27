@@ -300,13 +300,15 @@ ul {
    background-size: 100% 100%;
 }
 .itemCarrouselArrows{
+    margin-bottom: 10%;
+    margin-left: 10%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%; 
+    height: 80%;
+    width: 80%; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -318,13 +320,14 @@ ul {
 }
 
 .conteCarrouselController{
+   
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 .conteCarrouselController > a{
     text-decoration: none;
-    font-size: 2em;
+    font-size: 3em;
     color: rgb(0, 0, 0);
 }
 .conteCarrouselController a:hover{
@@ -357,13 +360,74 @@ iframe {
 
 
 /****Resposive*****/
+@media screen and (min-width: 1024px) {
+    
+    
+    .TituloDetalle{ 
+        font-size: 50px;
+    }
+    .DtVH h2{
+        font-size: 30px;
+    }
+    .DtVH h3{  
+        font-size: 30px;
+    }
+
+}
 
 @media (max-width: 800px){
+    .itemCarrousel{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .conteCarrousel{
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+    
+    .conteCarrouselController{
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .itemCarrouselArrows > a > i{
+        font-size: 50px;
+        color: black;
+    }
+    
+    .itemCarrouselArrows{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 80%; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .itemCarrouselTarjeta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .itemCarrouselTarjeta img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
     .Des p{
         font-size: 15px;
     }
     .Titulo h2{   
-        font-size: 40px;
+        font-size: 35px;
     }
     .itemCarrouselArrows > a > i{
         font-size: 40px;
@@ -372,11 +436,14 @@ iframe {
         display: block;
     }
     .DetalleS{ 
-       width: 40%;
+       width: 100%;
         margin-top: 3%;  
     }
+    .DtVH{
+        width: 100%;
+    }
     .DetalleT{
-        width: 40%;
+        width: 100%;
         margin-top: 3%;
     }
     .DtVH h2{
@@ -385,13 +452,17 @@ iframe {
     .DtVH h3{  
         font-size: 20px;
     }
+    .des{
+        width: 50%;
+    }
     .Tipo{
         width: 50%;
-        margin-left: 90%; 
+         
     }
     .DetalleP{
-        width: 40%;
+        width: 100%;
         margin-left: 3%;
     }
+
     
 }
