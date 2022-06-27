@@ -14,7 +14,8 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -72,76 +73,98 @@
 
     <div class="content_form animate__animated animate__backInUp">
 
-        <form action="" class="form">
+        <div>
+            <div class="form-head">
+                <div><h3>Cotiza con nosotros</h3></div>
+                <div class="form-b">
+                    <button id="bcancel" onclick="limpiarFormulario()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+                    <button id="breturn" onclick="history.back()"><i class="fa-solid fa-rotate-left"></i> Regresar</button>
+                </div>
+                <div class="form-b2">
+                    <button id="bcancel" onclick="limpiarFormulario()"><i class="fa-solid fa-xmark"></i></button>
+                    <button id="breturn" onclick="history.back()"><i class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <form action="" class="form" id="formCotizar">
 
-            <p>
-                <label for="nombres">Nombres:</label>
-                <input type="text" class="control" name="nombres" id="nombres">
-            </p>
-            <p>
-                <label for="telefono">Teléfono:</label>
-                <input type="text" class="control" name="telefono" id="telefono">
-            </p>
-            <p class="block">
-                <label for="correo">Dirección de correo:</label>
-                <input type="email" class="control" name="correo" id="correo">
-            </p>
-            <p>
-                <label for="destino">Destino:</label>
-                <select class="control" name="destino" id="destino" aria-placeholder="Elija un destino">
-                    <option value="">Granada</option>
-                    <option value="">León</option>
-                    <option value="">Masaya</option>
-                </select>
-            </p>
-            <p>
-                <label for="paquete">Tipo de paquete:</label>
-                <select class="control" name="paquete" id="paquete">
-                    <option value="" selected>Destino</option>
-                    <option value="">Destino con vehículo</option>
-                    <option value="">Destino con hotel</option>
-                    <option value="">Destino con vehículo y hotel</option>
-                </select>
-            </p>
-            <p>
-                <label for="modelo">Modelo de vehículo:</label>
-                <select class="control" name="modelo" id="modelo">
-                    <option value="">Hyundai Grand i-10 2015</option>
-                    <option value="">KIA Seltos 2021</option>
-                    <option value="">Toyota Yaris 2022</option>
-                </select>
-            </p>
-            <p>
-                <label for="habitacion">Tipo de habitación:</label>
-                <select class="control" name="habitacion" id="habitacion">
-                    <option value="">Suite Junior</option>
-                    <option value="">Suite Regular</option>
-                    <option value="">Suite Lujosa</option>
-                </select>
-            </p>
-            <p>
-                <label for="fecha_in">Fecha de ingreso:</label>
-                <input type="date" class="control" name="fecha_in" id="fecha_in">
-            </p>
-            <p>
-                <label for="fecha_sal">Fecha de salida:</label>
-                <input type="date" class="control" name="fecha_sal" id="fecha_sal">
-            </p>
-            <p class="block">
-                <label for="comentario">Comentario:</label>
-                <textarea class="coment" name="comentario" id="comentario" rows="10"></textarea>
-            </p>
-            <p class="block">
-                <button>Enviar</button>
-            </p>
-
-        </form>
+                <p>
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" class="control" name="nombres" id="nombres" required>
+                </p>
+                <p>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" class="control" name="telefono" id="telefono" required>
+                </p>
+                <p>
+                    <label for="correo">Dirección de correo:</label>
+                    <input type="email" class="control" name="correo" id="correo" required>
+                </p>
+                <p>
+                    <label for="destino">Destino:</label>
+                    <select class="control" name="destino" id="destino" aria-placeholder="Elija un destino">
+                        <option value="">Granada</option>
+                        <option value="">León</option>
+                        <option value="">Masaya</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="paquete">Tipo de paquete:</label>
+                    <select class="control" name="paquete" id="paquete">
+                        <option value="" selected>Destino</option>
+                        <option value="">Destino con vehículo</option>
+                        <option value="">Destino con hotel</option>
+                        <option value="">Destino con vehículo y hotel</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="modelo">Modelo de vehículo:</label>
+                    <select class="control" name="modelo" id="modelo">
+                        <option value="">Hyundai Grand i-10 2015</option>
+                        <option value="">KIA Seltos 2021</option>
+                        <option value="">Toyota Yaris 2022</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="fecha_in">Fecha de ingreso:</label>
+                    <input type="date" class="control" name="fecha_in" id="fecha_in" required>
+                </p>
+                <p>
+                    <label for="fecha_sal">Fecha de salida:</label>
+                    <input type="date" class="control" name="fecha_sal" id="fecha_sal" required>
+                </p>
+                <p class="block">
+                    <label for="comentario">Comentario:</label>
+                    <textarea class="coment" name="comentario" id="comentario" rows="10" placeholder="En este espacio usted debe agregar información adicional sobre la cantidad de personas que van a viajar, detalles sobre las actividades en caso de querer variar el itinerario."></textarea>
+                </p>
+                <p class="block">
+                    <button type="submit">Enviar</button>
+                </p>
+                <p class="block warnings" id="warnings"></p>
+    
+            </form>
+        </div>
+        <div class="infoCoti">
+            <div class="texto">
+                <h2>Información de contacto</h2>
+                <p><i class="fas fa-phone"></i> +505 2224-3771</p>
+                <p><i class="fas fa-location-dot"></i> Camino de Oriente</p>
+                <p><i class="fas fa-envelope"></i> info@simbadtours.com</p>
+            </div>
+            <div class="imagen"><img src="/img/Icono Simbad Tours.png" alt="" class="imgl"></div>
+        </div>
 
     </div>
 
     <!--<footer class="footer">
         <iframe src="footer.html" frameborder="0"></iframe>
     </footer>-->
+
+    <script>
+        function limpiarFormulario() {
+            document.getElementById("formCotizar").reset();
+        }
+    </script>
+    <script src="/js/validar_cotizacion.js"></script>
     
 </body>
 </html>
