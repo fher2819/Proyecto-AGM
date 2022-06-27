@@ -29,6 +29,7 @@ ul {
 }
 
 .footer {
+    
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -75,8 +76,8 @@ ul {
 .derechos {
     color: #fff;
     font-family: 'Calibri';
-    font-size: 14px;
-    margin-left: 40px;
+    font-size: 20px;
+   text-align: center;
     margin-top: 20px;
 }
 
@@ -97,7 +98,7 @@ ul {
 
     .CH{
         margin-top: 20%;
-        padding-right: 35%;
+       
         display: block;
     }
 
@@ -107,5 +108,17 @@ ul {
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
-    
+
+    .LogoTour img{
+       height: 100%;
+       width: 100%;
+    }
+    .If a{
+        font-size: 35px;
+    }
+
+    .derechos{
+        text-align: center;
+        
+    } 
 }
