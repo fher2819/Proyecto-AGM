@@ -10,13 +10,13 @@
 
 h3 {
     font-size: 24px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
     color: #042C6E;
 }
 
 body {
     font-size: 16px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
 }
 
 a {
@@ -200,6 +200,10 @@ ul {
     border-radius: 5px;
 }
 
+#cont-categoriasM {
+    overflow-x: scroll;
+}
+
 .nav-categorias {
     font-size: 17px;
     display: flex;
@@ -262,7 +266,102 @@ ul {
     opacity: 0.75;
 }
 
-/* Muestras de categorías*/
+/*#region carrusel cards*/
+
+#cardSemanaSanta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+    margin-bottom: 20px;
+}
+
+.slide-container{
+    max-width: 100%;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  .card{
+    border-radius: 25px;
+    background-color: #FFF;
+  }
+  
+  .card #imagen {
+    width: 90%;
+    height: 70vh;
+    overflow: hidden;
+    margin-left: 20px;
+    border-radius: 25px;
+  }
+  
+  .card #imagen img {
+    width: 200%;
+    height: 100%;
+    transition: 2s;
+    object-fit: cover;
+  }
+  
+  .card #imagen img:hover {
+    transform: translateX(-20%);
+    filter: brightness(80%);
+  }
+  
+  .card h3 {
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .card p {
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .card a:hover {
+    color: var(--color-links);
+  }
+  
+  .swiper-navBtn{
+    color: #6E93f7;
+    transition: color 0.3s ease;
+  }
+  .swiper-navBtn:hover{
+    color: #4070F4;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #4070F4;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+
+/*#endregion*/
+
+/* Muestras de categorías
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -300,7 +399,7 @@ ul {
 
 .cards a:hover {
     color: var(--color-links);
-}
+}*/
 
 #cardDeTemporada,
 #cardPlayas,
@@ -456,14 +555,24 @@ ul {
     opacity: 0.85;*/
 }
 
+#gmap {
+    width: 100%;
+    margin: auto;
+    height: 224px;
+}
+
 .logo-footer {
     width: 223px;
     height: 248px;
 }
 
-.informacion div {
+.informacion .hola {
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .informacion h2 {
@@ -498,24 +607,30 @@ ul {
 }
 
 /*Ventana flotante de registro*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.registro-titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
 }
 
-body {
-    background-image: url('fondo.jpg');
+#close {
+    background: none;
+    border: none;
+    color: #ff9d00;
+    float: right;
+    font-size: x-large;
 }
 
 .form-register {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: scroll;
     background: #135994;
     padding: 20px;
-    margin: auto;
-    margin-top: 30px;
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
@@ -523,9 +638,17 @@ body {
     position: relative;
 }
 
-    .form-register h4 {
+.form-register::-webkit-scrollbar {
+    width: 7px;
+}
+
+.form-register::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 4px;
+}
+
+    .registro-titulo h4 {
         font-size: 22px;
-        margin-bottom: 20px;
         text-align: center;
     }
 
@@ -551,23 +674,27 @@ body {
 .form-register a {
     color: white;
     text-decoration: none;
+    list-style: none;
 }
 
     .form-register a:hover {
         color: white;
-        text-decoration: underline;
+        
     }
 
-.form-register .botons {
+#registro {
     width: 100%;
     background: #0a1349;
     border: none;
+    border-radius: 5em;
     padding: 12px;
     color: white;
-    margin: 5px 0;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 16px;
     cursor: pointer;
 }
+
 .login {
     width: 100%;
     display: flex;
@@ -610,6 +737,10 @@ body {
         opacity: 0;
         pointer-events: none;
         transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       #miModal:target {
@@ -629,6 +760,15 @@ body {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+    }
+
+    .cerrar-modal{
+        width:100%;
+        height: 100vh;
+        opacity: 0;
+        position: absolute;
+        top:0; left: 0;
+        z-index: -1;
     }
     
     
@@ -665,11 +805,171 @@ body {
         }
     }
 
-.Mapa{
+
+/*#region modal inicio de sesión*/
+
+.login-titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
     
-    width :400px;
-    height:240px;
 }
+
+#close {
+    background: none;
+    border: none;
+    color: #ff9d00;
+    float: right;
+    font-size: x-large;
+}
+
+.form-login {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    background: #135994;
+    padding: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    position: relative;
+}
+
+.form-login::-webkit-scrollbar {
+    width: 7px;
+}
+
+.form-login::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 4px;
+}
+
+    .login-titulo h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+.controls {
+    width: 100%;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+
+.form-login h5 {
+    text-align: right;
+    margin: 1em 0;
+    font-size: 1em;
+}
+
+.form-login h5:hover {
+    text-decoration: underline;
+}
+
+.form-login p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-login a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+    .form-login a:hover {
+        color: white;
+        
+    }
+
+#login {
+    width: 100%;
+    background: #0a1349;
+    border: none;
+    border-radius: 5em;
+    padding: 12px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /*.login-element img {
+        width: 1.875rem;
+        height: 1.875rem;
+        position: relative;
+        top: 0;
+        left: -0.625rem;
+    }*/
+
+    .login-element:hover {
+        background-color: #1f53c5;
+    }
+
+    .modal2{
+        background-color: rgba(0,0,0,.8);
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #miModal2:target {
+          opacity: 1;
+          pointer-events: auto;
+      }
+
+      .cerrar-modal{
+        width:100%;
+        height: 100vh;
+        opacity: 0;
+        position: absolute;
+        top:0; left: 0;
+        z-index: -1;
+    }
+
+/*#endregion*/
+
 
 /*#region Menu Hamburguesa*/
 
@@ -859,11 +1159,6 @@ body {
         text-align: center;
     }
 
-    .informacion iframe {
-        width: 115%;
-        margin-bottom: 30px;
-        margin-left: -20px;
-    }
 
     .informacion h2,
     .informacion p {
