@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio-SimbadTours</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- FONT Bebas Neue-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--FONT Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!--Personalización CSS-->
+    <link rel="stylesheet" href="css/MisDestino.css">
+    <script src="js/ApiMapa.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(40, 116, 166)',
+        textColor: '#fff'
+    })</script>
+
+    <header class="presentacion">
+        <ul class="slider">
+            <li class="img1"></li>
+            <li class="img2"></li>
+            <li class="img3"></li>
+        </ul>
+        <div class="container">
+            <nav class="nav-main">
+                <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
+                <input type="checkbox" id="check">
+                <label for="check" class="lblHamburguesa">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                       <a href="nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li>
+                       <a href="contacto.html">CONTACTO</a>
+                   </li>
+                   <li>
+                       <a href="destinos.html">DESTINOS</a>
+                   </li>
+                   <li>
+                       <a href="prueba.html">SERVICIOS</a>
+                       <ul>
+                            <li><a href="RentaAuto.html">Renta de autos</a></li>
+                            <li><a href="Hoteles.html">Hotel</a></li>
+                            <li><a href="PaquetesT.html">Paquetes Turísticos</a></li>
+                        </ul>
+                   </li>
+                   <li>
+                       <a href="cotizar.html">COTIZAR</a>
+                   </li>
+                </ul>
+                <a href="#"><img src="img/estados-unidos.png" alt="Idioma Ingles" class="nav-ingles"></a>
+                <a href="#"><img src="img/espana.png" alt="Idioma Español" class="nav-español"></a>
+
+                <ul>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href="">Mis destinos</a>
+                    </li>
+                </ul>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="#miModal">CREAR CUENTA</a>
+                    </li>
+                    <li>
+                        <a href="#miModal2">MI CUENTA <i class="fas fa-user"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+            <hr noshade color="#232b2d">
+            <div id="miModal" class="modal">
+                <section class="form-register">
+                    <div class="registro-titulo">
+                        <h4>Registrarse</h4>
+                        <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                    </div>
+                    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+                    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+                    <input class="controls" type="text" name="dirección" id="dirección" placeholder="Dirección">
+                    <input class="controls" type="text" name="país" id="país" placeholder="País">
+                    <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+                    <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+                    <input class="controls" type="password" name="confirmar contraseña" id="correo" placeholder="Confirmar contraseña">
+            
+                    <!--<input class="botons" type="submit" value="Salir" onclick="location.href='#'">-->
+                    <input class="botons" id="registro" type="submit" value="Registrar">
+            
+                    <div class="login">
+                        <div class="login-element">
+                            <a href="" class="fa-brands fa-facebook-square"></a>
+                        </div>
+                        <div class="login-element">
+                            <a href="" class="fa-brands fa-google"></a>
+                        </div>
+                    </div>
+                </section>
+                <button class="cerrar-modal" onclick="location.href='#'"></button>
+            </div>
+            <section class="presentacion-text">
+                <h1 class="pt1">VACACIONES
+                    SEMANA SANTA</h1>
+                <h2 class="pt2">¡ÚLTIMAS PLAZAS!</h2>
+            </section>
+        </div>
+    </header>
+
+    <div class="ConteDestino">
+        <h1>Destinos cotizados</h1>
+        <div class="DestinoP">
+            <div class="Ima">
+                <img src="img/Granada.jpg" alt="">
+            </div>
+            <div class="DetalleReserva">
+                <h2>Granada-Nicaragua</h2>
+                <div class="Cotizar">
+                   
+                        <div class="PC">
+                            <h3>Nombres:</h3>
+                            <h3>Dirección de correo:</h3>
+                            <h3>Tipo de paquete:</h3>
+                            <h3>Fecha de ingreso:</h3>
+                            <h3>Teléfono:</h3>
+                            <h3>Destino:</h3>
+                            <h3>Modelo de vehículo:</h3>
+                            <h3>Fecha de salida:</h3>
+                        </div>
+                        <div class="SC">
+                            <h4>Miguel Arguello</h4>
+                            <h4>miguel@gmail.com</h4>
+                            <h4>Destino con vehículo</h4>
+                            <h4>30/06/2002</h4>
+                            <h4>87453698</h4>
+                            <h4>Granada</h4>
+                            <h4>Toyota Yaris 2022</h4>
+                            <h4>02/07/2022</h4>
+                        </div>
+                    
+
+                </div>
+                <div class="Precio">
+                    <h5>Precio:</h5>
+                    <h6>200$</h6>
+                </div>
+                
+
+                <button class="Reserva">Reservar</button>
+            </div>
+            
+        </div>
+
+
+
+    </div>
+
+    
+</body>
