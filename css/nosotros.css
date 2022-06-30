@@ -176,7 +176,9 @@ video {
     background-color: var(--image-bg);
     box-sizing: border-box;
 }*/
-
+.secciones1{
+    height: 100%;
+}
 .img-contenido {
     margin-top: 50%;
     width: 80%;
@@ -206,11 +208,25 @@ video {
     background-position: center;
     border-radius: 1em;
 }
+.img-contenido22{
+    visibility: hidden;
+    width: 0%;
+    height: 0;
+    background-image: url(/img/header5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    border-radius: 1em;
+}
 
 .img-contenido3 {
+    margin-top: 30%;
     width: 80%;
     height: 50%;
-    margin-top: 30%;
     background-image: url(/img/pareja-de-turistas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -222,7 +238,7 @@ video {
     border-radius: 1em;
 }
 
-.contenido {
+.contenido { 
     margin: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -240,6 +256,9 @@ video {
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+.articulos p{
+    text-align: justify;
 }
 .secciones1 {
     padding: 1em 1em;
@@ -362,16 +381,77 @@ video {
 }
 
 /*Footer*/
+/*Footer*/
+/*Footer*/
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #000;
+}
+
+.informacion {
+    width: 98%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*padding: 40px 50px;
+    border-radius: 50px;
+    background-color: #000000;
+    opacity: 0.85;*/
+}
+
+.logo-footer {
+    width: 223px;
+    height: 248px;
+}
+
+.informacion div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.informacion h2 {
+    color: #FFFFFF;
+}
+
+.informacion p {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.informacion a {
+    color: #FFFFFF;
+    size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*.footer {
+    background-image: url(/img/fondo\ footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.derechos {
+    color: #fff;
+    font-family: 'Calibri';
+    font-size: 1em;
+    text-align: center
+}
+
 .footer{
-    margin-top: 30%;
+    margin-top: 10%;
 }
 iframe {
-    
     width: 100%;
     height: 550px;
     border-style: none;
     margin-bottom: none;
 }
+
+
 
 /*#region Menu Hamburguesa*/
 
@@ -384,6 +464,67 @@ iframe {
 }
 
 @media screen and (max-width: 768px) {
+    .secciones1{
+        display: flex;
+    }
+
+    .BUltim a{
+        font-size: 60px;
+        margin-left: 5%;
+    }
+   
+    
+    .BUltim h4{
+        font-size: 40px;
+    }
+    
+    
+    .BUltim {
+        margin-top: 20%;
+    }
+    
+    .img-contenido3{
+        margin-top: 0.1%;
+        width: 90%;
+        height: 300px;
+    }
+    .img-contenido2{
+        margin-top: 0.1%;
+        visibility: hidden;
+        height: 0;
+    }
+    .img-contenido22{ 
+        width: 90%;
+        visibility: visible;
+        height: 300px;
+    }
+    .img-contenido{
+        justify-content: center;
+        width: 90%;
+        margin-top: 0.1%;
+        height: 300px;
+    }
+    .articulos {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .articulos h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .articulos p{
+        text-align: justify;
+        font-size: 30px;
+    }
+    iframe {
+        width: 100%;
+        height: 1400px;
+        border-style: none;
+        margin-bottom: none;
+    }
     .lblHamburguesa {
         display: inline;
     }
@@ -484,7 +625,7 @@ iframe {
     .contenido,
     .articulos,
     .secciones {
-        display: inline-block;
+        
         text-align: center;
     }
 
@@ -494,13 +635,13 @@ iframe {
         /*margin: 30px;*/
         display: grid;
         object-fit: cover;
-        height: 100vh
+        
     }
 
     .contenido,
     .articulos,
     .secciones2 {
-        display: inline-block;
+        
         text-align: center;
     }
 
@@ -510,7 +651,7 @@ iframe {
         font-size: 80%;
     }*/
 
-    @media screen and (max-width: 768px) {
+   /* @media screen and (max-width: 768px) {
         .BUltim{
             display: inline-block;
         }
@@ -520,7 +661,7 @@ iframe {
             display: grid;
             text-align: center;
         }
-    }
+    }*/
 
     
 #modalPaquete .imgContainer {
@@ -528,6 +669,9 @@ iframe {
     margin-bottom: 10px;
     height: 50vh;
     width: 100%;
+
+
+
 }
 
 
