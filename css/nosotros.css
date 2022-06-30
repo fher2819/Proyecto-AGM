@@ -224,7 +224,7 @@ video {
 }
 
 .img-contenido3 {
-    margin-top: 40%;
+    margin-top: 30%;
     width: 80%;
     height: 50%;
     background-image: url(/img/pareja-de-turistas.jpg);
@@ -245,10 +245,10 @@ video {
     font-family: 'Calibri';
 }
 .contenido h1{
-    font-size: 50px;
+    font-size: 45px;
 }
 .contenido p{
-    font-size: 40px;
+    font-size: 35px;
 }
 .articulos {
     width: 90%;
@@ -264,7 +264,7 @@ video {
     padding: 1em 1em;
 }
 
-.s2 {
+.secciones2 {
     text-align: right;
 }
 
@@ -340,8 +340,24 @@ video {
     justify-content: center;
 }
 
+.icono2 p{
+    font-size: 24px;
+    font-family: 'Calibri';
+    text-align: center;
+}
+
+/*.icono2 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 2%;
+    padding-right: 5%;
+}*/
+
 .BUltim a{
-    font-size: 80px;
+    font-size: 70px;
     margin-left: 5%;
 }
 .BUltim h3{
@@ -604,83 +620,48 @@ iframe {
         top: 15vh;
     }
 
-    .presentacion-text {
+    /**/
+
+    .contenido,
+    .articulos,
+    .secciones {
+        
+        text-align: center;
+    }
+
+
+    .contenido,
+    .secciones1 {
+        /*margin: 30px;*/
+        display: grid;
+        object-fit: cover;
+        
+    }
+
+    .contenido,
+    .articulos,
+    .secciones2 {
+        
+        text-align: center;
+    }
+
+    /*.contenido .articulos{
         display: grid;
         margin-top: 15vh;
-    }
+        font-size: 80%;
+    }*/
 
-    .presentacion-text .pt1,
-    .presentacion-text .pt2 {
-        margin-top: 15vh;
-        text-align: center;
-    }
-
-    .ver-mas {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/pexels-pixabay-38238.jpg);
-    }
-
-    .ver-mas h1 {
-        color: #fff;
-        font-size: 1.5em;
-    }
-
-
-
-    .cards,
-    .destinos,
-    .suscribirse {
-        display: inline-block;
-        text-align: center;
-    }
-
-
-    .cards div,
-    .destinos div {
-        margin: 30px;
-    }
-
-    .cards div h3,
-    .destinos div h3 {
-        text-align: center;
-    }
-
-    .suscribirse,
-    .suscribirse #email {
-        width: 100%;
-    }
-
-    .suscribirse div {
-        padding: 0;
-        margin-top: 30px;
-    }
-
-    .suscribirse h3 {
-        margin-top: 5%;
-        padding: 15px;
-    }
-
-    .video {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-    }
-
-    .video .video_v {
-        height: 60%;
-    }
-
-    .video .video_v iframe {
-        margin-top: 30px;
-        width: 100%;
-        height: 100%;
-    }
-
-    
-
-     .modal {
-        top: -100px;
-    }
+   /* @media screen and (max-width: 768px) {
+        .BUltim{
+            display: inline-block;
+        }
+        
+        .BUltim,
+        .icono2 {
+            display: grid;
+            text-align: center;
+        }
+    }*/
 
     
 #modalPaquete .imgContainer {

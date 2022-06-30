@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/ApiMapa.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -76,14 +78,17 @@
                         <a href="#miModal">CREAR CUENTA</a>
                     </li>
                     <li>
-                        <a href="#">MI CUENTA <i class="fas fa-user"></i> </a>
+                        <a href="#miModal2">MI CUENTA <i class="fas fa-user"></i> </a>
                     </li>
                 </ul>
             </nav>
             <hr noshade color="#232b2d">
             <div id="miModal" class="modal">
                 <section class="form-register">
-                    <h4>Registrarse</h4>
+                    <div class="registro-titulo">
+                        <h4>Registrarse</h4>
+                        <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                    </div>
                     <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
                     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
                     <input class="controls" type="text" name="dirección" id="dirección" placeholder="Dirección">
@@ -92,18 +97,19 @@
                     <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
                     <input class="controls" type="password" name="confirmar contraseña" id="correo" placeholder="Confirmar contraseña">
             
-                    <input class="botons" type="submit" value="Salir" onclick="location.href='#'">
-                    <input class="botons" type="submit" value="Registrar">
+                    <!--<input class="botons" type="submit" value="Salir" onclick="location.href='#'">-->
+                    <input class="botons" id="registro" type="submit" value="Registrar">
             
                     <div class="login">
                         <div class="login-element">
-                            <a href="#" class="fa-brands fa-facebook-square"></a>
+                            <a href="" class="fa-brands fa-facebook-square"></a>
                         </div>
                         <div class="login-element">
-                            <a href="#" class="fa-brands fa-google"></a>
+                            <a href="" class="fa-brands fa-google"></a>
                         </div>
                     </div>
                 </section>
+                <button class="cerrar-modal" onclick="location.href='#'"></button>
             </div>
             <section class="presentacion-text">
                 <h1 class="pt1">VACACIONES
@@ -119,51 +125,104 @@
             <p class="frase3">Escápate con tu pareja o con la familia, disfruta de un sin fin de experiencias que te esperan. ¡Sonríe, están empezando tus vacaciones!</p>
         </section>
         <section class="categorias">
-            <nav class="nav-categorias">
-                <ul class="nav-categorias-menu">
-                    <li>
-                        <a href="#categorias" onclick="show('cardSemanaSanta')">SEMANA SANTA</a>
-                    </li>
-                    <li>
-                        <a href="#categorias" onclick="show('cardDeTemporada')">DE TEMPORADA</a>
-                    </li>
-                    <li>
-                        <a href="#categorias" onclick="show('cardPlayas')">PLAYAS</a>
-                    </li>
-                    <li>
-                        <a href="#categorias" onclick="show('cardDepartamentos')">DEPARTAMENTOS</a>
-                    </li>
-                </ul>
-            </nav>
+            <div id="cont-categoriasM">
+                <nav class="nav-categorias">
+                    <ul class="nav-categorias-menu">
+                        <li>
+                            <a href="#categorias" onclick="show('cardSemanaSanta')">SEMANA SANTA</a>
+                        </li>
+                        <li>
+                            <a href="#categorias" onclick="show('cardDeTemporada')">DE TEMPORADA</a>
+                        </li>
+                        <li>
+                            <a href="#categorias" onclick="show('cardPlayas')">PLAYAS</a>
+                        </li>
+                        <li>
+                            <a href="#categorias" onclick="show('cardDepartamentos')">DEPARTAMENTOS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <hr>
             <section class="ver-mas">
                 <h1 class="titulo-categoria">SEMANA SANTA</h1>
                 <a href="#" class="mas">Ver más ofertas</a>
             </section>
             <div class="cards" id="cardSemanaSanta">
-                <div>
-                    <figure id="imagen">
-                        <img src="img/Leon.jpg" alt="card1">
-                    </figure>
-                    <h3>León</h3>
-                    <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
-                            las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
-                </div>
-                <div>
-                    <figure id="imagen">
-                        <img src="img/Granada.jpg" alt="card2">
-                    </figure>
-                    <h3>Granada</h3>
-                    <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
-                            <i class="fas fa-angle-double-right"></i></a></p>
-                </div>
-                <div>
-                    <figure id="imagen">
-                        <img src="img/Masaya.jpg" alt="card3">
-                    </figure>
-                    <h3>Masaya</h3>
-                    <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
-                            folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Leon.jpg" alt="card1">
+                                </figure>
+                                <h3>León</h3>
+                                <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                                        las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Granada.jpg" alt="card2">
+                                </figure>
+                                <h3>Granada</h3>
+                                <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                                        <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Masaya.jpg" alt="card3">
+                                </figure>
+                                <h3>Masaya</h3>
+                                <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
+                                        folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Leon.jpg" alt="card1">
+                                </figure>
+                                <h3>León</h3>
+                                <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                                        las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Granada.jpg" alt="card2">
+                                </figure>
+                                <h3>Granada</h3>
+                                <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                                        <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Masaya.jpg" alt="card3">
+                                </figure>
+                                <h3>Masaya</h3>
+                                <p><a href="destino_granada.html">Esta pequeña ciudad, a tan solo 30 minutos del sur de la capital es la cuna del
+                                        folcklore de niacaragua... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Leon.jpg" alt="card1">
+                                </figure>
+                                <h3>León</h3>
+                                <p><a href="destino_granada.html">Declarada Patrimonio de la Humanidad por la UNESCO. Una ciudad colonial, también de
+                                        las más antiguas... Ver más <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            <div class="card swiper-slide">
+                                <figure id="imagen">
+                                    <img src="img/Granada.jpg" alt="card2">
+                                </figure>
+                                <h3>Granada</h3>
+                                <p><a href="destino_granada.html">La Gran Sultana es la ciudad turìstica por excelencia de Nicaragua. Puedes... Ver más
+                                        <i class="fas fa-angle-double-right"></i></a></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
             <div class="cards" id="cardDeTemporada">
@@ -322,7 +381,9 @@
         </div>
     </section>
     <footer class="footer">
+
         <iframe src="footer.html" frameborder="0"></iframe>
+       
     </footer>
 
     <div id="modalPaquete" class="modal modalPaquete">
@@ -340,16 +401,49 @@
 
             <div class="login">
                 <div class="login-element">
-                    <a href="#" class="fa-brands fa-facebook-square"></a>
+                    <a href="" class="fa-brands fa-facebook-square"></a>
                 </div>
                 <div class="login-element">
-                    <a href="#" class="fa-brands fa-google"></a>
+                    <a href="" class="fa-brands fa-google"></a>
                 </div>
             </div>
         </section>
     </div>
 
+    <div id="miModal2" class="modal2">
+        <section class="form-login">
+            <div class="login-titulo">
+                <h4>Accede a tu cuenta</h4>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+    
+            <!--<input class="botons" type="submit" value="Salir" onclick="location.href='#'">-->
+            <input class="botons" id="login" type="submit" value="Iniciar sesión">
+
+            <a href=""><h5>Olvidé mi contraseña</h5></a>
+    
+            <div class="login">
+                <div class="login-element">
+                    <a href="" class="fa-brands fa-facebook-square"></a>
+                </div>
+                <div class="login-element">
+                    <a href="" class="fa-brands fa-google"></a>
+                </div>
+            </div>
+        </section>
+        <button class="cerrar-modal" onclick="location.href='#'"></button>
+    </div>
+
     <script src="/js/changeDiv.js"></script>
     <script src="/js/relojOferta.js"></script>
 </body>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
 </html>
