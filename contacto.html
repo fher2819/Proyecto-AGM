@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="css/contacto.css">
     <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-    <header class="presentacion">
+    <!--<header class="presentacion">
         <div class="container">
             <nav class="nav-main" id="menu">
                 <img src="img/Icono Simbad Tours.png" alt="SimbadTours LOGO" class="nav-logo">
@@ -73,62 +74,64 @@
                 <h2 class="pt2">Contáctanos</h2>
             </section>
         </div>
-    </header>
+    </header>-->
 
-    <div class="content">
+    <div class="content_form animate__animated animate__backInUp">
 
-        <div class="contact-wrapper animated bounceInUp" id="formulario">
-            <div class="contact-form" id="Grupo">
-                <h3>Escríbenos</h3>
-                <form action="">
-                    <p>
-                        <label>Nombre Completo</label>
-                        <input type="text" name="nombre" id="nombre">
-                        <i class="formulario__validación-estado fas fa-times-circle"></i>
-                    </p>
-                    <p>
-                        <label>Dirección de correo</label>
-                        <input type="email" name="correo" id="correo" >
-                    </p>
-                    <p>
-                        <label>Número de teléfono</label>
-                        <input type="tel" name="telefono" id="telefono">
-                    </p>
-                    <p>
-                        <label>Asunto</label>
-                        <input type="text" name="asunto" id="asunto">
-                    </p>
-                    <p class="block">
-                       <label>Comentario</label> 
-                       <a href="#modalCamera"><i class="fa-solid fa-camera"></i></a>
-                       <textarea name="message" rows="5"></textarea>
-                    </p>
-                    <p class="block">
-                        <button type="submit">
-                            Contactar Ahora
-                        </button>
-                    </p>
-                </form>
-            </div>
-            <div class="contact-info">
-                <h4>Disponibles de 8am a 5pm</h4>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +505 2224-3771</li>
-                    <li><i class="fas fa-location-dot"></i> Camino de Oriente</li>
-                    <li><i class="fas fa-envelope"></i> info@simbadtours.com</li>
-                </ul>
-                <div class="containerComentario">
-
-                    <div class="containerCanvas">
-                        <canvas id="canvasElement"></canvas>
-                    </div>
+        <div>
+            <div class="form-head">
+                <div><h3>Escríbenos</h3></div>
+                <div class="form-b">
+                    <button id="bcancel" onclick="limpiarFormulario()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+                    <button id="breturn" onclick="location.href='index.html'"><i class="fa-solid fa-rotate-left"></i> Regresar</button>
+                </div>
+                <div class="form-b2">
+                    <button id="bcancel" onclick="limpiarFormulario()"><i class="fa-solid fa-xmark"></i></button>
+                    <button id="breturn" onclick="location.href='index.html'"><i class="fa-solid fa-rotate-left"></i></button>
                 </div>
             </div>
+            <form action="" class="form" id="formCotizar">
+
+                <p>
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" class="control" name="nombres" id="nombres" required>
+                </p>
+                <p>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" class="control" name="telefono" id="telefono" required>
+                </p>
+                <p>
+                    <label for="correo">Dirección de correo:</label>
+                    <input type="email" class="control" name="correo" id="correo" required>
+                </p>
+                <p>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" class="control" name="asunto" id="asunto" >
+                </p>
+                <p class="block">
+                    <label for="comentario">Mensaje:</label>
+                    <textarea class="coment" name="comentario" id="comentario" rows="10"></textarea>
+                </p>
+                <p class="block">
+                    <button type="submit">Enviar</button>
+                </p>
+                <p class="block warnings" id="warnings"></p>
+    
+            </form>
+        </div>
+        <div class="infoCoti">
+            <div class="texto">
+                <h2>Información de contacto</h2>
+                <p><i class="fas fa-phone"></i> +505 2224-3771</p>
+                <p><i class="fas fa-location-dot"></i> Camino de Oriente</p>
+                <p><i class="fas fa-envelope"></i> info@simbadtours.com</p>
+            </div>
+            <div class="imagen"><img src="/img/Icono Simbad Tours.png" alt="" class="imgl"></div>
         </div>
 
     </div>
 
-    <footer class="footer">
+    <!--<footer class="footer">
         <div class="informacion">
             <div>
                 <h2>UBICACIÓN</h2>
@@ -159,7 +162,15 @@
             </div>
         </div>
         <h4 class="derechos">Copyright© 2022 Simbad Tours | Diseñado y Desarrollado por Simbad Tours.</h4>
-    </footer>
+    </footer>-->
+
+    <script>
+        function limpiarFormulario() {
+            document.getElementById("formCotizar").reset();
+        }
+    </script>
+
+    <script src="/js/validar_cotizacion.js"></script>
 
     <div id="modalCamera" class="modalCamera">
         <div class="contentModal">
