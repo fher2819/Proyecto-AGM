@@ -351,55 +351,26 @@ ul {
   }
   
   @media screen and (max-width: 768px) {
-    .slide-content{
-      margin: 0 10px;
+    #slide-content{
+
+        margin: 0 0;
     }
-    .swiper-navBtn{
-      display: none;
+    
+    
+    #swiper-navBtn{
+    
+        display: none;
+    }
+
+    .main-container1 {
+        width: 98%;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
     }
   }
 
 /*#endregion*/
-
-/* Muestras de categorías
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-.cards #imagen {
-    width: 90%;
-    height: 400px;
-    overflow: hidden;
-    margin-left: 20px;
-}
-
-.cards #imagen img {
-    width: 200%;
-    height: 100%;
-    transition: 2s;
-    object-fit: cover;
-}
-
-.cards #imagen img:hover {
-    transform: translateX(-20%);
-    filter: brightness(80%);
-}
-
-.cards h3 {
-    text-align: left;
-    margin-left: 20px;
-}
-
-.cards p {
-    text-align: left;
-    margin-left: 20px;
-}
-
-.cards a:hover {
-    color: var(--color-links);
-}*/
 
 #cardDeTemporada,
 #cardPlayas,
@@ -440,19 +411,18 @@ ul {
     width: 90%;
 }
 
-.sus:hover, .sus:focus {
+.sus:hover, .sus:focus,
+.susMini:hover, .susMini:focus {
     cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: #000000;
 }
 
-/*.suscribirse h3 {
-    float: right;
-    background-color: #FF8E01;
-    margin-right: 50px;
-    padding: 5px 5px;
-    font-size: 20px;
-}*/
+.susMini {
+    display: none;
+}
 
-/*Sección destinos*/
+/*#region Sección destinos*/
 .titulo_destinos {
     text-align: center;
     color: #062B6B;
@@ -486,6 +456,7 @@ ul {
     text-align: left;
     margin-left: 20px;
 }
+/*#endregion*/
 
 /*Sección donde está el botón*/
 .all_dest {
@@ -533,8 +504,25 @@ ul {
 }
 
 .video_v {
+    width: 98%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#video1 {
+    width: 100%;
+    height: 400px;
+}
+
+.video-controladores button {
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Calibri';
+    margin-top: 10px;
 }
 
 /*Footer*/
@@ -647,7 +635,8 @@ ul {
     border-radius: 4px;
 }
 
-    .registro-titulo h4 {
+    .registro-titulo h4,
+    .form-register h4 {
         font-size: 22px;
         text-align: center;
     }
@@ -741,6 +730,7 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 3;
       }
 
       #miModal:target {
@@ -772,15 +762,19 @@ ul {
     }
     
     
-    #modalPaquete .imgContainer {
-        margin-left: 10px;
+    .imgContainerOferta {
+        margin-top: 10px;
         margin-bottom: 10px;
-        height: 50vh;
-        width: 25vw;
+        border-radius: 16px;
     }
     
-    #modalPaquete .imgContainer img {
+    #modalPaquete .imgContainerOferta img {
         height: 50vh;
+        width: 100%;
+
+    }
+
+    #imagenOferta {
         width: 100%;
     }
     
@@ -952,6 +946,7 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 3;
       }
 
       #miModal2:target {
@@ -1003,6 +998,7 @@ ul {
         background: rgba(0, 0, 0, 0.95);
         text-align: center;
         transition: all .5s;
+        z-index: 3;
     }
 
     .nav-main ul {
@@ -1084,8 +1080,9 @@ ul {
 
     .presentacion-text .pt1,
     .presentacion-text .pt2 {
-        margin-top: 15vh;
+        margin-top: 2vh;
         text-align: center;
+        font-size: 1.8em;
     }
 
     .ver-mas {
@@ -1099,15 +1096,16 @@ ul {
 
 
 
-    .cards,
+    
     .destinos,
     .suscribirse {
         display: inline-block;
         text-align: center;
+        padding: 10px;
     }
 
 
-    .cards div,
+    
     .destinos div {
         margin: 30px;
     }
@@ -1178,13 +1176,21 @@ ul {
 }
 
 
-
-
 }
 
 /*#endregion */
 
-@media (min-width: 1400px) {
+@media screen and (max-width: 1280px) {
+    .susMini {
+        display: block;
+    }
+    
+    .sus {
+        display: none;
+    }
+}
+
+@media (min-width: 1500px) {
     .suscribirse p{
         font-size: 1.5em;
     }
@@ -1196,9 +1202,16 @@ ul {
     .suscribirse h2 {
         font-size: 2em;
     }
+
+    #email,
+    .sus,
+    .btn1 {
+        font-size: 1.3em;
+        font-family: 'Calibri';
+    }
+
+    .video_p P {
+        font-size: 1.5em;
+    }
 }
 
-@media screen and (max-width: 1920px) {
-    
-    
-}

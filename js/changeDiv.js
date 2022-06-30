@@ -8,47 +8,47 @@ function show(idDiv) {
 
     if (screnn.matches){
         if (idDiv === "cardSemanaSanta") {
-            w.style.display = "inline-block";
+            w.style.display = "block";
             x.style.display = "none";
             y.style.display = "none";
             z.style.display = "none";
         } else if (idDiv === "cardDeTemporada") {
             w.style.display = "none";
-            x.style.display = "inline-block";
+            x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
         } else if (idDiv === "cardPlayas") {
             w.style.display = "none";
             x.style.display = "none";
-            y.style.display = "inline-block";
+            y.style.display = "block";
             z.style.display = "none";
         } else {
             w.style.display = "none";
             x.style.display = "none";
             y.style.display = "none";
-            z.style.display = "inline-block";
+            z.style.display = "block";
         }
     }else{
         if (idDiv === "cardSemanaSanta") {
-            w.style.display = "grid";
+            w.style.display = "block";
             x.style.display = "none";
             y.style.display = "none";
             z.style.display = "none";
         } else if (idDiv === "cardDeTemporada") {
             w.style.display = "none";
-            x.style.display = "grid";
+            x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
         } else if (idDiv === "cardPlayas") {
             w.style.display = "none";
             x.style.display = "none";
-            y.style.display = "grid";
+            y.style.display = "block";
             z.style.display = "none";
         } else {
             w.style.display = "none";
             x.style.display = "none";
             y.style.display = "none";
-            z.style.display = "grid";
+            z.style.display = "block";
         }
     }
 

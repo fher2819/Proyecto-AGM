@@ -1,10 +1,17 @@
 const modal = document.querySelector('.modalPaquete');
 const closeModal = document.querySelector('.cerrarModal');
+const closeModal2 = document.querySelector('#cerrarOferta');
 
 closeModal.addEventListener('click',(e)=>{
     e.preventDefault();
     modal.classList.add('modalCerrar');
 
+});
+
+closeModal2.addEventListener('click',(e)=>{
+    e.preventDefault();
+    modal.classList.add('modalCerrar');
+    
 });
 
 
@@ -38,4 +45,4 @@ const countdown = (deadline, elem, finalMessage) =>{
 
 };
 
-countdown('Jun 10 2022 17:00:00 GMT-0600','clock','Oferta Terminada')
+countdown('July 3 2022 17:00:00 GMT-0600','clock','Oferta Terminada')
