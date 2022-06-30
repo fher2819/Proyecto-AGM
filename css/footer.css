@@ -28,6 +28,66 @@ ul {
     list-style: none;
 }
 
+/*Footer*/
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #000;
+}
+
+.informacion {
+    width: 98%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*padding: 40px 50px;
+    border-radius: 50px;
+    background-color: #000000;
+    opacity: 0.85;*/
+}
+
+.logo-footer {
+    width: 223px;
+    height: 248px;
+}
+
+.informacion div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.informacion h2 {
+    color: #FFFFFF;
+}
+
+.informacion p {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.informacion a {
+    color: #FFFFFF;
+    size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*.footer {
+    background-image: url(/img/fondo\ footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.derechos {
+    color: #fff;
+    font-family: 'Calibri';
+    font-size: 1em;
+    text-align: center
+}
+
+
 .footer {
     
     padding-top: 30px;
@@ -82,7 +142,28 @@ ul {
 }
 
 @media (max-width: 800px){
-    .informacion{
+    .footer {
+        width: 100%;
+    }
+
+    .footer,
+    .informacion {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .informacion iframe {
+        width: 115%;
+        margin-bottom: 30px;
+        margin-left: -20px;
+    }
+
+    .informacion h2,
+    .informacion p {
+        margin: 5px 0px;
+    }
+
+    /*.informacion{
         padding: 20px 30px;
         grid-template-columns: 1fr;
         padding: auto ;
@@ -90,7 +171,7 @@ ul {
     .footer {
         padding-top: 30px;
         padding-bottom: 30px;
-    }
+    }*/
     .Ubic iframe{
         width: 100%;
 
@@ -103,11 +184,10 @@ ul {
     }
 
     .IR{
-        display: grid;
+        
         margin-top: 20%;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
+        
+    }/*
 
     .LogoTour img{
        height: 100%;
@@ -115,10 +195,9 @@ ul {
     }
     .If a{
         font-size: 35px;
-    }
+    }*/
 
     .derechos{
-        text-align: center;
-        
+       padding-top: 7%; 
     } 
 }
