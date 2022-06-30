@@ -18,7 +18,7 @@ h3 {
 
 body {
     font-size: 16px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Calibri';
     background-image: url(/img/header4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +44,7 @@ ul {
     margin: auto;
 }
 
-/* Navegación */
+/*#region Navegación */
 .nav-main {
     font-size: 17px;
     display: flex;
@@ -120,6 +120,7 @@ ul {
     font-size: 30px;
     color: #e3e3e3;
 }
+/*#endregion*/
 
 /*Formulario de cotización*/
 .form-head {
