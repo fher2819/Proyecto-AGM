@@ -130,7 +130,7 @@
 
     <div class="ConteDestino">
         <h1>Destinos cotizados</h1>
-        <div class="DestinoP">
+        <div class="Destinos">
             <div class="Ima">
                 <img src="img/Granada.jpg" alt="">
             </div>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="SC">
                             <h4>Miguel Arguello</h4>
-                            <h4>miguel@gmail.com</h4>
+                            <h4>miguel22@gmail.com</h4>
                             <h4>Destino con vehículo</h4>
                             <h4>30/06/2002</h4>
                             <h4>87453698</h4>
@@ -165,16 +165,150 @@
                     <h5>Precio:</h5>
                     <h6>200$</h6>
                 </div>
-                
+                <a href=""></a>
 
-                <button class="Reserva">Reservar</button>
+                <button class="Reserva" onclick="location.href='#miModal3'">Reservar</button>
             </div>
             
         </div>
+        <div class="Destinos">
+            <div class="Ima">
+                <img src="img/Leon.jpg" alt="">
+            </div>
+            <div class="DetalleReserva">
+                <h2>León-Nicaragua</h2>
+                <div class="Cotizar">
+                   
+                        <div class="PC">
+                            <h3>Nombres:</h3>
+                            <h3>Dirección de correo:</h3>
+                            <h3>Tipo de paquete:</h3>
+                            <h3>Fecha de ingreso:</h3>
+                            <h3>Teléfono:</h3>
+                            <h3>Destino:</h3>
+                            <h3>Modelo de vehículo:</h3>
+                            <h3>Fecha de salida:</h3>
+                        </div>
+                        <div class="SC">
+                            <h4>Miguel Arguello</h4>
+                            <h4>miguel22@gmail.com</h4>
+                            <h4>Destino con vehículo</h4>
+                            <h4>20/06/2002</h4>
+                            <h4>87453698</h4>
+                            <h4>León</h4>
+                            <h4>Toyota Yaris 2022</h4>
+                            <h4>01/07/2022</h4>
+                        </div>
+                    
 
+                </div>
+                <div class="Precio">
+                    <h5>Precio:</h5>
+                    <h6>200$</h6>
+                </div>
+                <a href=""></a>
+
+                <button class="Reserva" onclick="location.href='#miModal3'">Reservar</button>
+            </div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+        <iframe src="footer.html" frameborder="0"></iframe>
+    </footer>
+    <div id="miModal3" class="modal3">
+        <div class="root">
+            <form action="" class="form-register2">
+                <div class="form-register__header">
+                    <ul class="progressbar">
+                        <li class="progressbar__option active">paso 1</li>
+                        <li class="progressbar__option">paso 2</li>
+                        <li class="progressbar__option">paso 3</li>
+                    </ul>
+                    <h1 class="form-register__title">Resgistrate en CodeMundo</h1>
+                </div>
+                <div class="form-register__body">
+                    <div class="step active" id="step-1">
+                        <div class="step__header">
+                            <h2 class="step__title">Información de cuenta<small>(Paso 1)</small></h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="email" placeholder="Correo" class="step__input">
+                            <input type="password" placeholder="Contraseña" class="step__input">
+                            <input type="password" placeholder="Confirmar contraseña" class="step__input">
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="step" id="step-2">
+                        <div class="step__header">
+                            <h2 class="step__title">Información de personal<small>(Paso 2)</small></h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="text" placeholder="Nombre" class="step__input">
+                            <input type="text" placeholder="Apellido" class="step__input">
+                            <input type="tel" placeholder="Teléfono" class="step__input">
+                            <textarea rows="4" cols="80" placeholder="Dirección" class="step__input"></textarea>
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
+                            <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="step" id="step-3">
+                        <div class="step__header">
+                            <h2 class="step__title">Información X<small>(Paso 3)</small></h2>
+                        </div>
+                        <div class="step__body">
+                            <input type="text" placeholder="Dato x" class="step__input">
+                            <input type="text" placeholder="Dato x" class="step__input">
+                            <input type="text" placeholder="Dato x" class="step__input">
+                        </div>
+                        <div class="step__footer">
+                            <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">Regresar</button>
+                            <button type="submit" class="step__button">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/Reserva.js"></script>
 
 
     </div>
+    
+
+
+    <div id="miModal2" class="modal2">
+        <section class="form-login">
+            <div class="login-titulo">
+                <h4>Accede a tu cuenta</h4>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+    
+            <!--<input class="botons" type="submit" value="Salir" onclick="location.href='#'">-->
+            <input class="botons" id="login" type="submit" value="Iniciar sesión">
+
+            <a href=""><h5>Olvidé mi contraseña</h5></a>
+    
+            <div class="login">
+                <div class="login-element">
+                    <a href="" class="fa-brands fa-facebook-square"></a>
+                </div>
+                <div class="login-element">
+                    <a href="" class="fa-brands fa-google"></a>
+                </div>
+            </div>
+        </section>
+        <button class="cerrar-modal" onclick="location.href='#'"></button>
+    </div>
+
+    <script src="/js/changeDiv.js"></script>
+    <script src="/js/relojOferta.js"></script>
+    <script src="/js/video.js"></script>
 
     
 </body>

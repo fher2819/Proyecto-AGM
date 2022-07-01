@@ -170,17 +170,24 @@ ul {
 
 /*Mis Destino*/
 .ConteDestino{
+    margin-top: 5%;
     width: auto;
     height: auto;
 }
 .ConteDestino h1{
+    text-align: center;
     padding-left: 3%;
     font-size: 50px;
     right: auto;
     color: #042C6E;
 }
 
-.DestinoP{
+.Destinos{
+    justify-content: center;
+
+    align-items: center;
+    border-radius: 7.5px;
+    border: black solid 1px;
     margin: 3% 3%;
     width: 90%;
     display: grid;
@@ -188,6 +195,8 @@ ul {
 }
 
 .Ima{
+    margin-top: 5%;
+    padding: 5%;
     width: auto;
     height: 100%;
 }
@@ -195,10 +204,11 @@ ul {
 .Ima img{
     object-fit: cover;
     width: 80%;
-    height: 80%;
+    height: 90%;
 }
 
 .DetalleReserva{
+    margin-top: 10%;
     width: auto;
     height: 100%;
 }
@@ -243,8 +253,8 @@ ul {
 }
 
 .Precio h6{
-    background-color: #000000;
     
+    padding-left: 25%;
     color: #17B3E5;
     border-width: bold;
     font-size: 35px;
@@ -260,3 +270,605 @@ ul {
     margin-top: 5%;
     border-radius: 15px
 }
+
+/*Ventana flotante de registro*/
+.registro-titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+#close {
+    background: none;
+    border: none;
+    color: #ff9d00;
+    float: right;
+    font-size: x-large;
+}
+
+.form-register {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    background: #135994;
+    padding: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    position: relative;
+}
+
+.form-register::-webkit-scrollbar {
+    width: 7px;
+}
+
+.form-register::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 4px;
+}
+
+    .registro-titulo h4,
+    .form-register h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+.controls {
+    width: 100%;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+    .form-register a:hover {
+        color: white;
+        
+    }
+
+#registro {
+    width: 100%;
+    background: #0a1349;
+    border: none;
+    border-radius: 5em;
+    padding: 12px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /*.login-element img {
+        width: 1.875rem;
+        height: 1.875rem;
+        position: relative;
+        top: 0;
+        left: -0.625rem;
+    }*/
+
+    .login-element:hover {
+        background-color: #1f53c5;
+    }
+
+    .modal{
+        background-color: rgba(0,0,0,.8);
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+      }
+
+      #miModal:target {
+          opacity: 1;
+          pointer-events: auto;
+      }
+
+      #modalPaquete {
+        animation: modalInicio 2s 1s forwards;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .modalCerrar {
+        animation: modalInicio 2s 1s forwards;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .cerrar-modal{
+        width:100%;
+        height: 100vh;
+        opacity: 0;
+        position: absolute;
+        top:0; left: 0;
+        z-index: -1;
+    }
+    
+    
+    .imgContainerOferta {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 16px;
+    }
+    
+    #modalPaquete .imgContainerOferta img {
+        height: 50vh;
+        width: 100%;
+
+    }
+
+    #imagenOferta {
+        width: 100%;
+    }
+    
+    .cerrarModal,
+    .contenedorReloj {
+        text-align: center;
+    }
+    
+    #clock,
+    .cerrarModal a {
+        font-size: 30px;
+    }
+    
+    @keyframes modalInicio {
+        100% {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            transition: opacity .8s .9s;
+            --transform: translateY(-100vh);
+            --transition: transform .8s;
+        }
+    }
+
+
+/*#region modal inicio de sesión*/
+
+.login-titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+#close {
+    background: none;
+    border: none;
+    color: #ff9d00;
+    float: right;
+    font-size: x-large;
+}
+
+.form-login {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    background: #135994;
+    padding: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    position: relative;
+}
+
+.form-login::-webkit-scrollbar {
+    width: 7px;
+}
+
+.form-login::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 4px;
+}
+
+    .login-titulo h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+.controls {
+    width: 100%;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+
+.form-login h5 {
+    text-align: right;
+    margin: 1em 0;
+    font-size: 1em;
+}
+
+.form-login h5:hover {
+    text-decoration: underline;
+}
+
+.form-login p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-login a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+    .form-login a:hover {
+        color: white;
+        
+    }
+
+#login {
+    width: 100%;
+    background: #0a1349;
+    border: none;
+    border-radius: 5em;
+    padding: 12px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /*.login-element img {
+        width: 1.875rem;
+        height: 1.875rem;
+        position: relative;
+        top: 0;
+        left: -0.625rem;
+    }*/
+
+    .login-element:hover {
+        background-color: #1f53c5;
+    }
+
+    .modal2{
+        background-color: rgba(0,0,0,.8);
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+      }
+
+      #miModal2:target {
+          opacity: 1;
+          pointer-events: auto;
+      }
+
+      .cerrar-modal{
+        width:100%;
+        height: 100vh;
+        opacity: 0;
+        position: absolute;
+        top:0; left: 0;
+        z-index: -1;
+    }
+
+/*#endregion*/
+
+
+/*#region Menu Hamburguesa*/
+
+.lblHamburguesa {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.footer{
+    margin-top: 10%;
+}
+iframe {
+    
+    width: 100%;
+    height: 550px;
+    border-style: none;
+    margin-bottom: none;
+}
+
+
+
+/*Reserva flotante*/
+:root {
+    
+    --color-bg-2: #FEF9E7;
+    --color-btn: #2196F3;
+    --color-header-step: orange;
+    --color-shadow: #222;
+    --color-border-input: #ddd;
+}
+/* Contenedor principal */
+#miModal3:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal3{
+        background-color: rgba(0,0,0,.8);
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+      }
+
+      :root {
+        
+        --color-bg-2: #FEF9E7;
+        --color-btn: #2196F3;
+        --color-header-step: #042C6E;
+        --color-shadow: #222;
+        --color-border-input: #ddd;
+    }
+    /* Contenedor principal */
+    .root {
+        width: 30%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-size: 16px;
+        font-family: sans-serif;
+        background-image: linear-gradient(var(--color-bg-1), var(--color-bg-2));
+        overflow: hidden;
+    }
+    
+    /* Formulario */
+    .form-register {
+        position: relative;
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    /* Header del formulario */
+    
+    /* Progressbar */
+    .progressbar {
+        display: flex;
+        list-style: none;
+        margin-bottom: 15px;
+        counter-reset: step;
+    }
+    
+    .progressbar__option {
+        width: 100%;
+        text-align: center;
+        font-size: .7rem;
+        text-transform: uppercase;
+        position: relative;
+    }
+    
+    .progressbar__option:before {
+        display: flex;
+        content: counter(step);
+        counter-increment: step;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        margin: 0 auto 5px;
+        border-radius: 3px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    
+    .progressbar__option:after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 10px;
+        left: -50%;
+        z-index: 1;
+    }
+    
+    .progressbar__option:first-child:after {
+        content: none;
+    }
+    
+    .progressbar__option.active:before, .progressbar__option.active:after {
+        background-color: var(--color-header-step);
+    }
+    
+    /* Título del formulario */
+    .form-register__title {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    /* body del formulario */
+    .form-register__body {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    /* step */
+    .step {
+        background-color: white;
+        box-shadow: 5px 5px 5px 2px var(--color-shadow);
+        border-radius: 3px;
+        min-width: 100%;
+        opacity: 0;
+        transition: all .2s linear;
+    }
+    
+    .step.active {
+        opacity: 1;
+    }
+    
+    .step.to-left {
+        margin-left: -100%;
+    }
+    
+    .step.inactive {
+        animation-name: scale;
+        animation-duration: .2s;
+        animation-direction: alternate;
+        animation-iteration-count: 2;
+    }
+    
+    @keyframes scale {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+    
+    /* header de step */
+    .step__header {
+        padding: 20px 15px;
+        background-color: var(--color-header-step);
+        border-radius: 3px 3px 0 0;
+    }
+    
+    .step__title {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    /* body de step */
+    .step__body {
+        padding: 20px 15px 0;
+    }
+    
+    /* step inputs */
+    .step__input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid var(--color-border-input);
+    }
+    
+    /* step footer */
+    .step__footer {
+        padding: 20px 15px;
+        text-align: center;
+    }
+    
+    /* step botones */
+    .step__button {
+        display: inline-block;
+        padding: 10px;
+        background-color: var(--color-btn);
+        border: none;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+    }
