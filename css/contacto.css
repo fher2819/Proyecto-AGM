@@ -282,7 +282,7 @@ h6 {
 
 #camara {
     right: 10px;
-    top: 5vh;
+    bottom: 5vh;
     position: fixed;
     z-index: 3;
     background-color: #042C6E;
@@ -290,6 +290,12 @@ h6 {
     border-radius: 50%;
     padding: 10px;
     font-size: 1.5em;
+    border: none;
+}
+
+#camara:hover, #camara:focus {
+    background-color: var(--color-links);
+    cursor: pointer;
 }
 
 /*Footer*/
@@ -330,6 +336,27 @@ iframe {
         font-size: 1em;
         right: 5px;
     }
+
+    .contentModal {
+        max-height: 80vh;
+        max-width: 95vw;
+    }
+
+    .divImage {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0;
+    }
+
+    #videoElement {
+        max-width: 100%;
+    }
+
+    .contentModal div a , .contentModal div button {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 525px) {
@@ -368,6 +395,8 @@ iframe {
 
     #camara {
         font-size: 2em;
+        padding: 15px;
+        right: 15px;
     }
 }
 
@@ -435,6 +464,15 @@ iframe {
 
 /*Modal */
 
+#cerrarT {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+
 .contentModal {
     position: relative;
     top: 50%;
@@ -451,34 +489,37 @@ iframe {
 
 .modalCamera {
     background-color: rgba(0, 0, 0, .8);
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0;
-    pointer-events: none;
+    /*opacity: 0;
+    pointer-events: none;*/
     transition: all 1s;
+    z-index: 4;
 }
 
-#modalCamera:target {
+/*#modalCamera:target {
     opacity: 1;
     pointer-events: auto;
-}
+}*/
 
-.contentModal a , .contentModal button {
+.contentModal div a , .contentModal div button {
     
     padding: .7em;
     font-family: 'Calibrí';
     font-size: 25px;
     border: none;
-    background: none;
+    border-radius: 1em;
+    background: #042C6E;
     outline: 0;
     color: #fff;
     border-bottom: 1px solid var(--color-links);
 }
 
-.contentModal a , .contentModal button {
+.contentModal  a , .contentModal  button {
     background: #042C6E;
     border: 0;
     text-transform: uppercase;
@@ -491,6 +532,7 @@ iframe {
 
 .contentModal .containerBtn{
     margin-top: 25px;
+
 }
 
 #canvasElement{
