@@ -83,11 +83,11 @@
                 <div><h3>Escríbenos</h3></div>
                 <div class="form-b">
                     <button id="bcancel" onclick="limpiarFormulario()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
-                    <button id="breturn" onclick="location.href='index.html'"><i class="fa-solid fa-rotate-left"></i> Regresar</button>
+                    <button id="breturn" onclick="history.back()"><i class="fa-solid fa-rotate-left"></i> Regresar</button>
                 </div>
                 <div class="form-b2">
                     <button id="bcancel" onclick="limpiarFormulario()"><i class="fa-solid fa-xmark"></i></button>
-                    <button id="breturn" onclick="location.href='index.html'"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="breturn" onclick="history.back()"><i class="fa-solid fa-rotate-left"></i></button>
                 </div>
             </div>
             <form action="" class="form" id="formCotizar">
@@ -127,11 +127,14 @@
                 <p><i class="fas fa-envelope"></i> info@simbadtours.com</p>
             </div>
             <div class="imagen"><img src="/img/Icono Simbad Tours.png" alt="" class="imgl"></div>
+            <div class="containerCanvas">
+                <canvas id="canvasElement"></canvas>
+            </div>
         </div>
 
     </div>
 
-    <a href="#modalCamera" id="camara"><i class="fa-solid fa-camera"></i></a>
+    <button onclick="openModal()" id="camara"><i class="fa-solid fa-camera"></i></button>
 
     <!--<footer class="footer">
         <div class="informacion">
@@ -183,9 +186,10 @@
             <div class="containerBtn">
 
                 <button id="tomarPhoto">Tomar Foto </button>
-                <a href="#">Regresar</a>
+                <button onclick="closeModal()">Regresar</button>
             </div>
         </div>
+        <button onclick="closeModal()" id="cerrarT"></button>
     </div>
 
     <script src="/js/camera.js"></script>
