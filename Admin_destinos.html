@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/admin_destinos.css" />
+  </head>
+  <body>
+    <input type="checkbox"  id="nav-toggle">
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <h2><span class="lab la-accusoft" style="font-family: 'Poppins';">Simbad Tours</span></h2>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="./admin.html" ><span class="las la-igloo"></span><span>Resumen</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Admin_clientes.html"
+              ><span class="las la-users"></span>
+              <span>Clientes</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Admin_inventario.html"
+              ><span class="las la-search"></span>
+              <span>Inventario</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./Admin_mensajes.html" 
+              ><span class="las la-comment"></span>
+              <span>Mensajes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active">
+                <span class="las la-hotel"></span>
+                <span>Destinos</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <h2>
+         
+            <label for="nav-toggle">
+              <span class="las la-bars"></span>
+            </label>
+          
+          Dashboard
+        </h2>
+
+        <div class="search-wrapper">
+            <span class="las la-search"></span>
+            <input type="search" placeholder="Search here">
+
+        </div>
+
+        <div class="user-wrapper">
+            <img src="./img/Icono Simbad Tours 2.png" width="40px" height="40px">
+            <div>
+                <h4>Gerente</h4>
+                <small>Super Admin</small>
+            </div>
+        </div>
+      </header>
+       <main>
+        <div class="cards">
+            
+            <!--<div class="card-single">
+                <div>
+                    <h1>54</h1>
+                    <span>Clientes</span>
+                </div>
+                <div>
+                    <span class="las la-users"></span>
+                </div>
+                
+            </div>
+
+            <div class="card-single">
+                <div>
+                    <h1>35</h1>
+                    <span>Reservaciones</span>
+                </div>
+                <div>
+                    <span class="las la-clipboard"></span>
+                </div>
+                
+            </div>
+
+            
+            <div class="card-single">
+                <div>
+                    <h1>190</h1>
+                    <span>Mensajes</span>
+                </div>
+                <div>
+                    <span class="las la-clipboard"></span>
+                </div>
+                
+            </div>
+
+            <div class="card-single">
+                <div>
+                    <h1>C$50,500</h1>
+                    <span>Ingresos Mensual</span>
+                </div>
+                <div>
+                    <span class="las la-clipboard"></span>
+                </div>
+                
+            </div>-->
+
+
+                
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                 <div class="card">
+                    <div class="card-header">
+                         <h2>Destinos</h2>
+
+                         <div class="search-wrapper">
+                            <span class="las la-search"></span>
+                            <input type="search" placeholder="Buscar un destino">
+                
+                        </div>
+    
+                         <button onclick="openModal()"><i class="las la-plus-square"></i> Agregar Destino<span class="">
+    
+                         </span></button>
+                    </div>
+    
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table width="100%">
+                                <thead>
+                                   <tr>
+                                    <td>Destino</td>
+                                    <td>Creación</td>
+                                    <td>Estado</td>
+                                    <td>Cupos disponibles</td>
+                                    <td>Categoría</td>
+                                    <td><h2 class="las la-plus-circle"></h2></td>
+                                   </tr>
+                                </thead>
+                                   <tbody>
+                                    <tr>
+                                        <td>Granada</td>
+                                        <td>04/06/2022</td>
+                                        <td><span></span>
+                                        Activo
+                                        </td>
+                                        <td>7</td>
+                                        <td>Playa</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>León</td>
+                                        <td>12/06/2022</td>
+                                        <td><span></span>
+                                        Activo
+                                        </td>
+                                        <td>13</td>
+                                        <td>Playa</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Masaya</td>
+                                        <td>15/06/2022</td>
+                                        <td><span></span>
+                                        Activo
+                                        </td>
+                                        <td>20</td>
+                                        <td>Playa</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>San Juan del Sur</td>
+                                        <td>22/05/2022</td>
+                                        <td><span></span>
+                                        Full
+                                        </td>
+                                        <td>12</td>
+                                        <td>Histórico</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Isla de Ometepe</td>
+                                        <td>04/06/2022</td>
+                                        <td><span></span>
+                                        Desactivo
+                                        </td>
+                                        <td>8</td>
+                                        <td>Playa</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cornd Island</td>
+                                        <td>12/06/2022</td>
+                                        <td><span></span>
+                                        Full
+                                        </td>
+                                        <td>7</td>
+                                        <td>De temporada</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Granada</td>
+                                        <td>04/06/2022</td>
+                                        <td><span></span>
+                                        Activo
+                                        </td>
+                                        <td>4</td>
+                                        <td>Departamento</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Masaya</td>
+                                        <td>12/06/2022</td>
+                                        <td><span></span>
+                                        Full
+                                        </td>
+                                        <td>15</td>
+                                        <td>Departamento</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>León</td>
+                                        <td>15/06/2022</td>
+                                        <td><span></span>
+                                        Activo
+                                        </td>
+                                        <td>24</td>
+                                        <td>De temporada</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>San Juan del Sur</td>
+                                        <td>22/05/2022</td>
+                                        <td><span></span>
+                                        Desactivo
+                                        </td>
+                                        <td>8</td>
+                                        <td>Departamento</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Isla de Ometepe</td>
+                                        <td>04/06/2022</td>
+                                        <td><span></span>
+                                        Activo
+                                        </td>
+                                        <td>5</td>
+                                        <td>Playa</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Corn Island</td>
+                                        <td>12/06/2022</td>
+                                        <td><span></span>
+                                        Full
+                                        </td>
+                                        <td>14</td>
+                                        <td>Playa</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
+                                    </tr>
+                                   </tbody>
+                                </table>
+                        </div>
+                    </div>
+    
+                 </div>
+                </div>
+           
+
+                
+            </div>
+        </div>
+
+       
+
+
+       </main>
+
+       
+
+
+    </div>
+
+        <div class="modalContainer" id="modalDetalles">
+            <div class="Detalles">
+                <div class="header-detalles">
+                    <h2>Detalles del destino</h2>
+                    <div style="display: flex;">
+                        <button id="beditar"><i class="las la-pen"></i> Editar</button>
+                        <button id="bcerrar" onclick="closeModal()"><i class="las la-times"></i></button>
+                    </div>
+                </div>
+
+                <div class="contenido-detalles" id="contenido-detalles">
+                    <form action="">
+                        <label for="titulo">Nombre del destino:</label>
+                    <input type="text" name="titulo" class="entrada" id="titulo">
+                    <label for="imagen1">Imagen vista previa:</label>
+                    <input type="file" name="imagen1" class="entrada" id="imagen1"/>
+                    <label for="imagen2">Imagen banner:</label>
+                    <input type="file" name="imagen2" class="entrada" id="imagen2"/>
+                    <label for="descripcion">Descripción vista previa del destino:</label>
+                    <textarea name="descripcion" id="descripcion" class="entrada" cols="30" rows="10"></textarea>
+                    <label for="beneficios">¿Qué inclye el paquete?: </label>
+                    <textarea name="beneficios" id="beneficios" class="entrada" cols="30" rows="10"></textarea>
+                    <label for="coordenadas">Coordenadas del destino</label>
+                    <div id="coordenadas">
+                        <label for="latitud">Latitud:</label>
+                        <input type="text" id="latitud">
+                        <label for="longitud">Longitud:</label>
+                        <input type="text" id="longitud">
+                    </div>
+                    <label for="">Imágenes de galería: <span style="font-size: 24px;">
+                        <i class="las la-minus-circle"></i><i class="las la-plus-circle"></i>
+                    </span></label>
+                    <input type="file" name="imagen3" class="entrada" id="imagen3"/>
+                    <input type="file" name="imagen4" class="entrada" id="imagen4"/>
+                    <input type="file" name="imagen5" class="entrada" id="imagen5"/>
+                    <input type="file" name="imagen6" class="entrada" id="imagen6"/>
+                    <input type="file" name="imagen7" class="entrada" id="imagen7"/>
+                    </form>
+                    <label for="">Itinerario: <span style="font-size: 24px;">
+                        <i class="las la-minus-circle"></i><i class="las la-plus-circle"></i>
+                    </span></label>
+                    <label for="dia1">Título Día 1</label>
+                    <input type="text" class="entrada" id="dia1" name="dia1">
+                    <label for="dia1d">Descripción Día 1</label>
+                    <textarea class="entrada" name="dia1d" id="dia1d" cols="30" rows="10"></textarea>
+                    <label for="dia2">Título Día 2</label>
+                    <input type="text" class="entrada" id="dia2" name="dia2">
+                    <label for="dia2d">Descripción Día 1</label>
+                    <textarea class="entrada" name="dia2d" id="dia2d" cols="30" rows="10"></textarea>
+                    <div class="botonesC" style="display: flex;">
+                        <button id="beditar"><i class="las la-save"></i> Guardar Cambios</button>
+                        <button id="bcancelar"><i class="las la-times-circle"></i> Cancelar</i></button>
+                    </div>
+                </div>
+            </div>
+            <button onclick="closeModal()" id="cerrarT"></button>
+        </div>
+
+        <script src="./js/adminDestinos.js"></script>
+
+  </body>
+</html>
