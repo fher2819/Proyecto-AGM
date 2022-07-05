@@ -334,13 +334,13 @@ video {
 
 /*Ultimos Botones*/
 
-.icono2{
+/*.icono2{
     padding-right: 5%;
     margin-top: 2%;
     display: flex;
     justify-content: center;
     height: fit-content;
-}
+}*/
 
 .icono2 p{
     font-size: 24px;
@@ -348,16 +348,15 @@ video {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .icono2 {
         position: none;
         display: flex;
-        
         margin-bottom: auto;
     }
 }
-
-/*.icono2 {
+*/
+.icono2 {
     width: 90%;
     margin: auto;
     display: flex;
@@ -365,7 +364,7 @@ video {
     justify-content: center;
     margin-top: 2%;
     padding-right: 5%;
-}*/
+}
 
 .BUltim a{
     font-size: 70px;
@@ -531,8 +530,13 @@ iframe {
     }
 
     .BUltim a{
-        font-size: 60px;
+        padding-top: 10%;
+        font-size: 50px;
         margin-left: 5%;
+    }
+    .BUltim p{
+        
+        font-size: 25px;
     }
    
     
@@ -542,9 +546,23 @@ iframe {
     
     
     .BUltim {
+        
+        
+        height: auto;
         margin-top: 20%;
     }
-    
+    .BUltim  h4{
+        font-size: 35px;
+    }
+    .BUltim h3{
+        font-size: 30px;
+    }
+     .icono2{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
     .img-contenido3{
         margin-top: 0.1%;
         width: 90%;
@@ -574,12 +592,12 @@ iframe {
         grid-template-columns: repeat(1, 1fr);
     }
     .articulos h1{
-        font-size: 40px;
+        font-size: 35px;
         text-align: center;
     }
     .articulos p{
         text-align: justify;
-        font-size: 30px;
+        font-size: 25px;
     }
     iframe {
         width: 100%;
