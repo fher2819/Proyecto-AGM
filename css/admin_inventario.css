@@ -238,7 +238,18 @@ td .status {
   border-radius: 50%;
   margin-right: 1rem;
 }
+tr button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1em;
+}
 
+tr button:hover,
+tr button:focus {
+  cursor: pointer;
+}
 tr td:last-child {
   display: flex;
   align-items: center;
@@ -488,4 +499,142 @@ tr td:last-child {
   .cards {
     grid-template-columns: 100%;
   }
+}
+
+
+
+/*#region modales*/
+.modalContainer {
+
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 1s;
+  z-index: 101;
+  justify-content: center;
+  align-items: center;
+}
+
+.Detalles {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-height: 300px;
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.61);
+  padding: 10px;
+  text-align: center;
+
+}
+
+.header-detalles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-detalles div button {
+  font-size: 1em;
+  border: none;
+  padding: 0.3em;
+}
+
+#beditar {
+  background-color: var(--color-links);
+  border-radius: 1em;
+  color: white;
+  align-self: flex-start;
+}
+
+#bcerrar {
+  font-size: 1.5em;
+  align-self: flex-start;
+  padding: 0.1em;
+  margin-left: 5px;
+}
+.cont{
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.Izq{
+  display: flex;
+  width: 100%;
+}
+.Der{
+  display: flex;
+  width: 90%;
+}
+.labe{
+  width: 50%;
+}
+.input{
+  width: 50%;
+}
+.input input{
+  margin-top: 3%;
+}
+.cont h5{
+  padding-top: 3%;
+  font-size: 15px;
+}
+
+
+
+
+#contenido-detalles {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 530px;
+  padding: 0.3em;
+  overflow-y: scroll;
+}
+
+#contenido-detalles form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+#contenido-detalles::-webkit-scrollbar {
+  width: 7px;
+}
+
+#contenido-detalles::-webkit-scrollbar-thumb {
+  background-color: #1d2231;
+  border-radius: 4px;
+}
+
+.botonesC {
+  justify-content: flex-end;
+}
+
+.botonesC button {
+  font-size: 1em;
+  border: none;
+  padding: 0.3em;
+  margin: 10px 0;
+}
+
+#bcancelar {
+  background-color: red;
+  color: white;
+  border-radius: 1em;
+  margin-left: 5px;
+}
+
+#cerrarT {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

@@ -88,9 +88,9 @@
        <main>
         <div class="cards">
             
-           <span class="las la-search" width="40px"><input type="search" name="" placeholder="Buscar Producto">
-           </span>  <span class="las la-search" width="40px"><input type="search" name="" id="#Proveedor" placeholder="Buscar Proveedor">
-           </span> <span class="las la-search" width="40px"><input type="search" name="" id="#Descripcion" placeholder="Descripcion">
+           <span class="las la-search" width="40px"><input type="search" name="" placeholder="Buscar Placa">
+           </span>  <span class="las la-search" width="40px"><input type="search" name="" id="#Proveedor" placeholder="Buscar Marca">
+           </span> <span class="las la-search" width="40px"><input type="search" name="" id="#Descripcion" placeholder="Buscar Modelo">
            </span>
 
 
@@ -103,7 +103,7 @@
                     <div class="card-header">
                          <h2>Inventario</h2>
     
-                         <button>Agregar Proveedor<span class="las la-search">
+                         <button>Agregar vehículo<span class="las la-search">
     
                          </span></button>
                     </div>
@@ -113,85 +113,46 @@
                             <table width="100%">
                                 <thead>
                                    <tr>
-                                    <td>ID</td>
-                                    <td>Proveedor</td>
+                                    <td>Placa</td>
+                                    <td>Marca</td>
+                                    <td>Modelo</td>
                                     <td>Fecha Entrada</td>
-                                    <td>Descripcion</td>
-                                    <td>Etiquetas</td>
                                     <td>Precio Compra</td>
+                                    <td><h2 class="las la-plus-circle"></h2></td>
                                    </tr>
                                 </thead>
                                    <tbody>
                                     <tr>
-                                        <td>001</td>
-                                        <td>Trivago</td>
+                                        <td>M 251 763</td>
+                                        <td>Toyota</td>
+                                        <td>Yaris</td>
                                         <td><span></span>
                                         05/07/2022
                                         </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
                                         <td style="color: rgb(20,235,20);">$850</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>002</td>
-                                        <td>Despegar.com</td>
+                                        <td>M 246 827</td>
+                                        <td>Toyota</td>
+                                        <td>Hilux</td>
                                         <td><span></span>
                                         05/07/2022
-                                        </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
-                                        <td style="color: rgb(20,235,20);">$850</td>
+                                        </td>                          
+                                        <td style="color: rgb(20, 235, 20);">$850</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>003</td>
-                                        <td>Booking.com</td>
+                                        <td>M 248 221</td>
+                                        <td>Toyota</td>
+                                        <td>Prado</td>
                                         <td><span></span>
                                         05/07/2022
                                         </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
                                         <td style="color: rgb(20,235,20);">$850</td>
+                                        <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
-                                    <tr>
-                                        <td>004</td>
-                                        <td>Despegar.com</td>
-                                        <td><span></span>
-                                        05/07/2022
-                                        </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
-                                        <td style="color: rgb(20,235,20);">$850</td>
-                                    </tr>
-                                    <tr>
-                                        <td>005</td>
-                                        <td>Trivago</td>
-                                        <td><span></span>
-                                        05/07/2022
-                                        </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
-                                        <td style="color: rgb(20,235,20);">$850</td>
-                                    </tr>
-                                    <tr>
-                                        <td>006</td>
-                                        <td>Despegar.com</td>
-                                        <td><span></span>
-                                        05/07/2022
-                                        </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
-                                        <td style="color: rgb(20,235,20);">$850</td>
-                                    </tr>
-                                    <tr>
-                                        <td>007</td>
-                                        <td>Trivago</td>
-                                        <td><span></span>
-                                        05/07/2022
-                                        </td>
-                                        <td>Paquete VIP</td>
-                                        <td style="color: rgb(20, 235, 20);">Rivas VIP NIC</td>
-                                        <td style="color: rgb(20,235,20);">$850</td>
-                                    </tr>
+                                   
                                    
                                    </tbody>
                                 </table>
@@ -206,6 +167,8 @@
             </div>
         </div>
 
+
+
        
 
 
@@ -213,5 +176,60 @@
 
 
     </div>
+    <div class="modalContainer" id="modalDetalles">
+      <div class="Detalles">
+          <div class="header-detalles">
+              <h2>Detalles del destino</h2>
+              <div style="display: flex;">
+                  <button id="beditar"><i class="las la-pen"></i> Editar</button>
+                  <button id="bcerrar" onclick="closeModal()"><i class="las la-times"></i></button>
+              </div>
+          </div>
+
+          <div class="contenido-detalles" id="contenido-detalles">
+              <form action="">
+                <div class="cont">
+                  <div class="Izq">
+                    <div class="labe">
+                      <h5>Tipo:</h5>
+                      <h5>Motor:</h5>
+                      <h5>Color Exterior:</h5>
+                      <h5>kilometraje:</h5>
+                      
+                    </div>
+                    <div class="input">
+                      <input type="text" name="titulo" class="entrada" id="titulo">
+                      <input type="text" name="titulo" class="entrada" id="titulo">
+                      <input type="text" name="titulo" class="entrada" id="titulo">
+                      <input type="text" name="titulo" class="entrada" id="titulo">
+                    </div>
+                  </div>
+                  <div class="Der"> 
+                    <div class="labe">
+                      <h5>Transmisión:</h5>
+                      <h5>Color Interior:</h5>
+                      <h5>Combustible:</h5>
+                      <h5>Tracción:</h5>
+                    </div>
+                    <div class="input">
+                      <input type="text" name="titulo" class="entrada" id="titulo">
+                      <input type="text" name="titulo" class="entrada" id="titulo">          
+                      <input type="text" name="titulo" class="entrada" id="titulo">      
+                      <input type="text" name="titulo" class="entrada" id="titulo">
+                    </div>
+                    
+                   
+                   
+
+                  </div>
+                </div>
+                  
+              
+          </div>
+      </div>
+      <button onclick="closeModal()" id="cerrarT"></button>
+  </div>
+
+  <script src="./js/adminDestinos.js"></script>
   </body>
 </html>
