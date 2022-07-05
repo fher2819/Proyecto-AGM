@@ -140,7 +140,7 @@
                         </div>
                         <div class="SC">
                             <h4>Miguel Arguello</h4>
-                            <h4>miguel22@gmail.com</h4>
+                            <h4>marg22@gmail.com</h4>
                             <h4>Destino con vehículo</h4>
                             <h4>30/06/2002</h4>
                             <h4>87453698</h4>
@@ -181,7 +181,7 @@
                         </div>
                         <div class="SC">
                             <h4>Miguel Arguello</h4>
-                            <h4>miguel22@gmail.com</h4>
+                            <h4>marg22@gmail.com</h4>
                             <h4>Destino con vehículo</h4>
                             <h4>20/06/2002</h4>
                             <h4>87453698</h4>
@@ -208,14 +208,14 @@
     </footer>
     <div id="miModal3" class="modal3">
         <div class="root">
-            <form action="" class="form-register2">
+            <form action="" class="form-register4">
                 <div class="form-register__header">
                     <ul class="progressbar">
                         <li class="progressbar__option active">paso 1</li>
                         <li class="progressbar__option">paso 2</li>
                         <li class="progressbar__option">paso 3</li>
                     </ul>
-                    <h1 class="form-register__title">Resgistrate en CodeMundo</h1>
+                    <h1 class="form-register__title">Reserva en SimbadTours</h1>
                 </div>
                 <div class="form-register__body">
                     <div class="step active" id="step-1">
@@ -248,12 +248,42 @@
                     </div>
                     <div class="step" id="step-3">
                         <div class="step__header">
-                            <h2 class="step__title">Información X<small>(Paso 3)</small></h2>
+                            <h2 class="step__title">Información de la reserva<small>(Paso 3)</small></h2>
                         </div>
                         <div class="step__body">
-                            <input type="text" placeholder="Dato x" class="step__input">
-                            <input type="text" placeholder="Dato x" class="step__input">
-                            <input type="text" placeholder="Dato x" class="step__input">
+                            <div class="NA">
+                                <h2>Número de adultos:</h2>
+                            <select class="control" name="destino" id="destino" aria-placeholder="Elija un destino">
+                                <option value=""></option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">mas de 10</option>
+                            </select>
+                            </div>
+                            
+    
+                            <div class="Viaje">
+                                <h1>Viajamos con niños</h1>
+                            <input type="radio">
+                            </div>
+    
+                            <div class="Fechas">
+                                <h2>Fecha de salida</h2>
+                                <input type="date" placeholder="Fecha de salida" class="step__input" id="FS">
+                                <h2>Fecha de retorno</h2>
+                                <input type="date" placeholder="Fecha de retorno" class="step__input" id="FR">
+                            </div>
+                           
+    
+                                
                         </div>
                         <div class="step__footer">
                             <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">Regresar</button>

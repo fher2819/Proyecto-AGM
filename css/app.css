@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --color-bg-1: #008080;
     --color-bg-2: #FEF9E7;
@@ -13,6 +14,7 @@
     --color-border-input: #ddd;
 }
 /* Contenedor principal */
+
 .root {
     display: flex;
     justify-content: center;
@@ -147,6 +149,36 @@
 /* body de step */
 .step__body {
     padding: 20px 15px 0;
+}
+.step__body h1{
+    
+    font-size: 15px;
+}
+
+.Viaje{
+    margin-top: 10%;
+    display: flex;
+}
+
+.Viaje input{
+    margin-left: 3%;
+}
+.Fechas{
+    margin-top: 7%;
+}
+.Fechas h2{
+    padding-top: 5%;
+    font-size: 15px;
+}
+.NA{
+    display: flex;
+    margin-top: 5%;
+}
+.NA h2{
+    font-size: 15px;
+}
+.NA select{
+    margin-left: 3%;
 }
 
 /* step inputs */
