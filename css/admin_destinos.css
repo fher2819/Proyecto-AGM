@@ -394,7 +394,7 @@ tr button:focus {
 .Detalles {
   position: relative;
   width: 90%;
-  height: 80vh;
+  height: 90vh;
   max-height: 600px;
   max-width: 700px;
   background: white;
@@ -436,21 +436,21 @@ tr button:focus {
   width: 100%;
   height: 530px;
   padding: 0.3em;
-  overflow-y: scroll;
+  
 }
 
-#contenido-detalles form {
+#form-detalles {
   display: flex;
   flex-direction: column;
   width: 100%;
-
+  overflow-y: scroll;
 }
 
-#contenido-detalles::-webkit-scrollbar {
+#form-detalles::-webkit-scrollbar {
   width: 7px;
 }
 
-#contenido-detalles::-webkit-scrollbar-thumb {
+#form-detalles::-webkit-scrollbar-thumb {
   background-color: #1d2231;
   border-radius: 4px;
 }

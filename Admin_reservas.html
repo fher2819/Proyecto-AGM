@@ -141,17 +141,36 @@
                 <div class="projects">
                  <div class="card">
                     <div class="card-header">
-                         <h2>Destinos</h2>
+                         <!--<h2>Reservas</h2>-->
 
                          <div class="search-wrapper">
                             <span class="las la-search"></span>
-                            <input type="search" placeholder="Buscar un destino">
+                            <input type="search" placeholder="Buscar por código">
                 
                         </div>
+
+                        <div class="search-wrapper">
+                            <span class="las la-search"></span>
+                            <input type="search" placeholder="Buscar por destino">
+                
+                        </div>
+
+                        <div class="search-wrapper">
+                            <span class="las la-search"></span>
+                            <input type="search" placeholder="Buscar por fecha">
+                
+                        </div>
+
+                        <select class="card-select" name="filtro-reservas" id="filtro-reservas">
+                            <option value="" selected>Todas</option>
+                            <option value="">Reservado</option>
+                            <option value="">Cancelado</option>
+                            <option value="">Cotizado</option>
+                        </select>
     
-                         <button onclick="openModal()"><i class="las la-plus-square"></i> Agregar Destino<span class="">
+                         <!--<button onclick="openModal()"><i class="las la-plus-square"></i> Agregar Destino<span class="">
     
-                         </span></button>
+                         </span></button>-->
                     </div>
     
                     <div class="card-body">
@@ -159,133 +178,133 @@
                             <table width="100%">
                                 <thead>
                                    <tr>
-                                    <td>Destino</td>
+                                    <td>Código</td>
                                     <td>Creación</td>
                                     <td>Estado</td>
-                                    <td>Cupos disponibles</td>
-                                    <td>Categoría</td>
+                                    <td>Destino</td>
+                                    <td>Correo Cliente</td>
                                     <td><h2 class="las la-plus-circle"></h2></td>
                                    </tr>
                                 </thead>
                                    <tbody>
                                     <tr>
-                                        <td>Granada</td>
+                                        <td>001</td>
                                         <td>04/06/2022</td>
                                         <td><span></span>
-                                        Activo
+                                        Reservado
                                         </td>
-                                        <td>7</td>
-                                        <td>Playa</td>
+                                        <td>León</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>León</td>
+                                        <td>002</td>
                                         <td>12/06/2022</td>
                                         <td><span></span>
-                                        Activo
+                                        Reservado
                                         </td>
-                                        <td>13</td>
-                                        <td>Playa</td>
+                                        <td>Granada</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>Masaya</td>
+                                        <td>003</td>
                                         <td>15/06/2022</td>
                                         <td><span></span>
-                                        Activo
+                                        Reservado
                                         </td>
-                                        <td>20</td>
-                                        <td>Playa</td>
+                                        <td>Masaya</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>San Juan del Sur</td>
+                                        <td>004</td>
                                         <td>22/05/2022</td>
                                         <td><span></span>
-                                        Full
+                                        Cancelado
                                         </td>
-                                        <td>12</td>
-                                        <td>Histórico</td>
+                                        <td>San Juan del Sur</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>Isla de Ometepe</td>
+                                        <td>005</td>
                                         <td>04/06/2022</td>
                                         <td><span></span>
-                                        Desactivo
+                                        Cancelado
                                         </td>
-                                        <td>8</td>
-                                        <td>Playa</td>
+                                        <td>Isla de Ometepe</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
+                                        <td>006</td>
+                                        <td>12/06/2022</td>
+                                        <td><span></span>
+                                        Cotizado
+                                        </td>
                                         <td>Cornd Island</td>
-                                        <td>12/06/2022</td>
-                                        <td><span></span>
-                                        Full
-                                        </td>
-                                        <td>7</td>
-                                        <td>De temporada</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>Granada</td>
+                                        <td>007</td>
                                         <td>04/06/2022</td>
                                         <td><span></span>
-                                        Activo
+                                        Reservado
                                         </td>
-                                        <td>4</td>
-                                        <td>Departamento</td>
+                                        <td>León</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>Masaya</td>
+                                        <td>008</td>
                                         <td>12/06/2022</td>
                                         <td><span></span>
-                                        Full
+                                        Reservado
                                         </td>
-                                        <td>15</td>
-                                        <td>Departamento</td>
+                                        <td>Granada</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>León</td>
+                                        <td>009</td>
                                         <td>15/06/2022</td>
                                         <td><span></span>
-                                        Activo
+                                        Cancelado
                                         </td>
-                                        <td>24</td>
-                                        <td>De temporada</td>
+                                        <td>Masaya</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>San Juan del Sur</td>
+                                        <td>010</td>
                                         <td>22/05/2022</td>
                                         <td><span></span>
-                                        Desactivo
+                                        Reservado
                                         </td>
-                                        <td>8</td>
-                                        <td>Departamento</td>
+                                        <td>San Juan del Sur</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>Isla de Ometepe</td>
+                                        <td>011</td>
                                         <td>04/06/2022</td>
                                         <td><span></span>
-                                        Activo
+                                        Reservado
                                         </td>
-                                        <td>5</td>
-                                        <td>Playa</td>
+                                        <td>Isla de Ometepe</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                     <tr>
-                                        <td>Corn Island</td>
+                                        <td>012</td>
                                         <td>12/06/2022</td>
                                         <td><span></span>
-                                        Full
+                                        Cancelado
                                         </td>
-                                        <td>14</td>
-                                        <td>Playa</td>
+                                        <td>Cornd Island</td>
+                                        <td>Lorem_ipsum@gmail.com</td>
                                         <td><button onclick="openModal()" class="b-detalles">Detalles</button></td>
                                     </tr>
                                    </tbody>
@@ -322,44 +341,69 @@
                 </div>
 
                 <div class="contenido-detalles" id="contenido-detalles">
-                    <form action="">
-                        <label for="titulo">Nombre del destino:</label>
-                    <input type="text" name="titulo" class="entrada" id="titulo">
-                    <label for="imagen1">Imagen vista previa:</label>
-                    <input type="file" name="imagen1" class="entrada" id="imagen1"/>
-                    <label for="imagen2">Imagen banner:</label>
-                    <input type="file" name="imagen2" class="entrada" id="imagen2"/>
-                    <label for="descripcion">Descripción vista previa del destino:</label>
-                    <textarea name="descripcion" id="descripcion" class="entrada" cols="30" rows="10"></textarea>
-                    <label for="beneficios">¿Qué inclye el paquete?: </label>
-                    <textarea name="beneficios" id="beneficios" class="entrada" cols="30" rows="10"></textarea>
-                    <label for="coordenadas">Coordenadas del destino</label>
-                    <div id="coordenadas">
-                        <label for="latitud">Latitud:</label>
-                        <input type="text" id="latitud">
-                        <label for="longitud">Longitud:</label>
-                        <input type="text" id="longitud">
-                    </div>
-                    <label for="">Imágenes de galería: <span style="font-size: 24px;">
-                        <i class="las la-minus-circle"></i><i class="las la-plus-circle"></i>
-                    </span></label>
-                    <input type="file" name="imagen3" class="entrada" id="imagen3"/>
-                    <input type="file" name="imagen4" class="entrada" id="imagen4"/>
-                    <input type="file" name="imagen5" class="entrada" id="imagen5"/>
-                    <input type="file" name="imagen6" class="entrada" id="imagen6"/>
-                    <input type="file" name="imagen7" class="entrada" id="imagen7"/>
+                    <form action="" id="form-detalles">
+                        <p>
+                            <label for="monto">Monto:</label>
+                            <input type="text" class="control" name="monto" id="monto" required>
+                        </p>
+                        <p>
+                            <label for="estadoR">Estado:</label>
+                            <select class="control" name="estadoR" id="estadoR" aria-placeholder="Elija un destino">
+                                <option value="">Reservado</option>
+                                <option value="">Cancelado</option>
+                                <option value="">Cotizado</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" class="control" name="nombres" id="nombres" required>
+                        </p>
+                        <p>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" class="control" name="telefono" id="telefono" required>
+                        </p>
+                        <p>
+                            <label for="correo">Dirección de correo:</label>
+                            <input type="email" class="control" name="correo" id="correo" required>
+                        </p>
+                        <p>
+                            <label for="destino">Destino:</label>
+                            <select class="control" name="destino" id="destino" aria-placeholder="Elija un destino">
+                                <option value="">Granada</option>
+                                <option value="">León</option>
+                                <option value="">Masaya</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="paquete">Tipo de paquete:</label>
+                            <select class="control" name="paquete" id="paquete">
+                                <option value="" selected>Destino</option>
+                                <option value="">Destino con vehículo</option>
+                                <option value="">Destino con hotel</option>
+                                <option value="">Destino con vehículo y hotel</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="modelo">Modelo de vehículo:</label>
+                            <select class="control" name="modelo" id="modelo">
+                                <option value="">Hyundai Grand i-10 2015</option>
+                                <option value="">KIA Seltos 2021</option>
+                                <option value="">Toyota Yaris 2022</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="fecha_in">Fecha de ingreso:</label>
+                            <input type="date" class="control" name="fecha_in" id="fecha_in" required>
+                        </p>
+                        <p>
+                            <label for="fecha_sal">Fecha de salida:</label>
+                            <input type="date" class="control" name="fecha_sal" id="fecha_sal" required>
+                        </p>
+                        <p class="block">
+                            <label for="comentario">Comentario:</label>
+                            <textarea class="coment" name="comentario" id="comentario" rows="10" placeholder="En este espacio usted debe agregar información adicional sobre la cantidad de personas que van a viajar, detalles sobre las actividades en caso de querer variar el itinerario."></textarea>
+                        </p>
                     </form>
-                    <label for="">Itinerario: <span style="font-size: 24px;">
-                        <i class="las la-minus-circle"></i><i class="las la-plus-circle"></i>
-                    </span></label>
-                    <label for="dia1">Título Día 1</label>
-                    <input type="text" class="entrada" id="dia1" name="dia1">
-                    <label for="dia1d">Descripción Día 1</label>
-                    <textarea class="entrada" name="dia1d" id="dia1d" cols="30" rows="10"></textarea>
-                    <label for="dia2">Título Día 2</label>
-                    <input type="text" class="entrada" id="dia2" name="dia2">
-                    <label for="dia2d">Descripción Día 1</label>
-                    <textarea class="entrada" name="dia2d" id="dia2d" cols="30" rows="10"></textarea>
                     <div class="botonesC" style="display: flex;">
                         <button id="beditar"><i class="las la-save"></i> Guardar Cambios</button>
                         <button id="bcancelar"><i class="las la-times-circle"></i> Cancelar</i></button>
