@@ -259,6 +259,7 @@ ul {
     border: 1px solid #042C6E;
     border-radius: 5px;
     padding: 10px;
+    background-color: rgb(255, 255, 255,0.6);
 }
 
 .mas:hover {
@@ -313,12 +314,12 @@ ul {
   
   .card h3 {
     text-align: left;
-    margin-left: 20px;
+    margin: 0 5%;
   }
   
   .card p {
     text-align: left;
-    margin-left: 20px;
+    margin: 0 5%;
   }
   
   .card a:hover {
@@ -436,26 +437,31 @@ ul {
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 
-.destinos img {
-    width: 90%;
+.destinos div img {
+    width: 100%;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
+    border-radius: 1em;
 }
 
 .destinos h3 {
     text-align: left;
-    margin-left: 20px;
 }
 
 .destinos p {
     text-align: left;
-    margin-left: 20px;
 }
+
+.destinos div a:hover, .destinos div a:focus {
+    color: var(--color-links);
+    cursor: pointer;
+}
+
 /*#endregion*/
 
 /*Sección donde está el botón*/
@@ -501,6 +507,10 @@ ul {
 .video_p {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.video_p p {
+    font-size: 1.3em;
 }
 
 .video_v {
@@ -1260,6 +1270,11 @@ iframe {
 }
 
 @media (min-width: 1500px) {
+
+    .frase2, .frase3 {
+        font-size: 1.3em;
+    }
+
     .suscribirse p{
         font-size: 1.5em;
     }
@@ -1280,7 +1295,23 @@ iframe {
     }
 
     .video_p P {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
+
+    .destinos div p, .destinos div a {
+        font-size: 1.3em;
+    }
+
+    .destinos div h3 {
+        font-size: 2.1em;
+    }
+
+    .card h3 {
+        font-size: 2.1rem;
+      }
+      
+      .card p {
+        font-size: 1.5rem;
+      }
 }
 

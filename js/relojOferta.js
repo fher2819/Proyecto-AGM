@@ -45,4 +45,4 @@ const countdown = (deadline, elem, finalMessage) =>{
 
 };
 
-countdown('July 3 2022 17:00:00 GMT-0600','clock','Oferta Terminada')
+countdown('July 7 2022 17:00:00 GMT-0600','clock','Oferta Terminada')

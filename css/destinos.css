@@ -183,10 +183,11 @@ ul {
 
 .cards #imagen {
     width: 90%;
-    height: 400px;
+    height: 600px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 1em;
 }
 
 .cards #imagen img {
@@ -393,6 +394,13 @@ iframe {
         margin-bottom: 30px;
     }
 
+}
+
+@media screen and (min-width: 1500px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
 }
 
 /*#region menu lblUser*/
